@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #ffffff;
+  --mist: #f3f7fb;
+  --ink: #0f2436;
+  --ink-soft: #4a6178;
+  --sky: #1c86d6;
+  --sky-deep: #0b2e4a;
+  --coral: #ff6b4a;
+  --coral-deep: #e5502f;
+  --line: #dce6ee;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-sky: var(--sky);
+  --color-sky-deep: var(--sky-deep);
+  --color-coral: var(--coral);
+  --color-coral-deep: var(--coral-deep);
+  --color-line: var(--line);
+
+  --font-display: var(--font-shoulders), "Arial Narrow", sans-serif;
+  --font-body: var(--font-manrope), -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-space-mono), "SFMono-Regular", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
