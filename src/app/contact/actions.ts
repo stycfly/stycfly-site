@@ -1,6 +1,52 @@
 "use server";
 
+import { Resend } from "resend";
 import { getSupabaseServerClient } from "@/lib/supabase";
+
+const ACTIVITY_LABELS: Record<string, string> = {
+  immobilier: "Immobilier",
+  "evenement-mariage": "Événement / Mariage",
+  autre: "Autre",
+};
+
+async function sendLeadNotification(lead: {
+  name: string;
+  email: string;
+  phone: string;
+  activity: string;
+  location: string;
+  eventDate: string;
+  message: string;
+}) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn("RESEND_API_KEY absent — notification email non envoyée.");
+    return;
+  }
+
+  const resend = new Resend(apiKey);
+  const activityLabel = ACTIVITY_LABELS[lead.activity] ?? lead.activity;
+
+  await resend.emails.send({
+    from: "StycFly <onboarding@resend.dev>",
+    to: "contactstycfly@gmail.com",
+    replyTo: lead.email,
+    subject: `Nouvelle demande de devis — ${activityLabel}`,
+    text: [
+      `Nom : ${lead.name}`,
+      `E-mail : ${lead.email}`,
+      lead.phone ? `Téléphone : ${lead.phone}` : null,
+      `Activité : ${activityLabel}`,
+      lead.location ? `Lieu : ${lead.location}` : null,
+      lead.eventDate ? `Date souhaitée : ${lead.eventDate}` : null,
+      "",
+      "Message :",
+      lead.message,
+    ]
+      .filter(Boolean)
+      .join("\n"),
+  });
+}
 
 export type LeadFormState = {
   status: "idle" | "success" | "error";
@@ -45,6 +91,12 @@ export async function submitLead(
         message:
           "Une erreur est survenue lors de l'envoi. Réessayez ou contactez-moi directement par téléphone.",
       };
+    }
+
+    try {
+      await sendLeadNotification({ name, email, phone, activity, location, eventDate, message });
+    } catch (emailErr) {
+      console.error("Email notification failed:", emailErr);
     }
 
     return {
