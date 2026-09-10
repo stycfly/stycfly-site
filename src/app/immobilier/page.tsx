@@ -25,7 +25,7 @@ export default function ImmobilierPage() {
       >
         <div className="mt-8 flex justify-center gap-4">
           <Button href="/contact">Demander un devis immobilier</Button>
-          <Button href="/realisations" variant="ghost">Voir nos réalisations</Button>
+          <Button href="/realisations" variant="ghost-invert">Voir nos réalisations</Button>
         </div>
       </PageHero>
 

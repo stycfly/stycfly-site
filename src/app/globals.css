@@ -2,14 +2,15 @@
 
 :root {
   --paper: #ffffff;
-  --mist: #f3f7fb;
-  --ink: #0f2436;
-  --ink-soft: #4a6178;
-  --sky: #1c86d6;
-  --sky-deep: #0b2e4a;
+  --mist: #f3f6fb;
+  --ink: #0a1830;
+  --ink-soft: #526082;
+  --sky: #2f74d6;
+  --sky-deep: #0a1830;
+  --navy-soft: #16294a;
   --coral: #ff6b4a;
   --coral-deep: #e5502f;
-  --line: #dce6ee;
+  --line: #dfe5f0;
 }
 
 @theme inline {
@@ -19,6 +20,7 @@
   --color-ink-soft: var(--ink-soft);
   --color-sky: var(--sky);
   --color-sky-deep: var(--sky-deep);
+  --color-navy-soft: var(--navy-soft);
   --color-coral: var(--coral);
   --color-coral-deep: var(--coral-deep);
   --color-line: var(--line);
@@ -53,11 +55,95 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
+/* Scroll-reveal: JS adds .is-visible when the element enters the viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(255, 107, 74, 0.55); }
+  70% { box-shadow: 0 0 0 8px rgba(255, 107, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 107, 74, 0); }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(3%, -4%); }
+  100% { transform: translate(0, 0); }
+}
+.animate-drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-menu-in {
+  animation: menu-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   * {
     transition: none !important;
+    animation: none !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }

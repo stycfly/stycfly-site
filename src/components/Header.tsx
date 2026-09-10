@@ -19,33 +19,33 @@ export default function Header() {
   const [prestationsOpen, setPrestationsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-sky-deep/95 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
         <Link
           href="/"
-          className="font-display text-xl font-extrabold text-ink"
+          className="font-display text-xl font-extrabold text-white transition-transform duration-200 hover:scale-[1.03]"
           onClick={() => setOpen(false)}
         >
           StycFly<span className="text-coral">.</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm font-semibold text-ink-soft md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-semibold text-white/70 md:flex">
           <div
             className="relative"
             onMouseEnter={() => setPrestationsOpen(true)}
             onMouseLeave={() => setPrestationsOpen(false)}
           >
-            <button className="flex items-center gap-1 hover:text-ink" type="button">
+            <button className="nav-link flex items-center gap-1 hover:text-white" type="button">
               Prestations
-              <span aria-hidden="true">▾</span>
+              <span aria-hidden="true" className={`transition-transform duration-200 ${prestationsOpen ? "rotate-180" : ""}`}>▾</span>
             </button>
             {prestationsOpen && (
-              <div className="absolute left-0 top-full w-64 rounded-lg border border-line bg-paper py-2 shadow-lg">
+              <div className="animate-menu-in absolute left-0 top-full w-64 rounded-lg border border-white/10 bg-navy-soft py-2 shadow-lg">
                 {PRESTATIONS.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block px-4 py-2.5 hover:bg-mist hover:text-ink"
+                    className="block px-4 py-2.5 text-white/70 transition-colors duration-150 hover:bg-white/5 hover:text-white"
                   >
                     {item.label}
                   </Link>
@@ -54,7 +54,7 @@ export default function Header() {
             )}
           </div>
           {LINKS.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:text-ink">
+            <Link key={item.href} href={item.href} className="nav-link hover:text-white">
               {item.label}
             </Link>
           ))}
@@ -62,7 +62,7 @@ export default function Header() {
 
         <Link
           href="/contact"
-          className="hidden rounded-md bg-sky px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-deep md:inline-flex"
+          className="hidden rounded-md bg-coral px-5 py-2.5 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5 hover:bg-coral-deep md:inline-flex"
         >
           Demander un devis
         </Link>
@@ -72,7 +72,7 @@ export default function Header() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label="Ouvrir le menu"
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-line md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-white/15 text-white md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           ☰
@@ -80,23 +80,23 @@ export default function Header() {
       </div>
 
       {open && (
-        <div id="mobile-menu" className="border-t border-line px-6 py-5 md:hidden">
-          <div className="flex flex-col gap-4 text-sm font-semibold text-ink-soft">
-            <span className="mono-label text-sky">Prestations</span>
+        <div id="mobile-menu" className="animate-menu-in border-t border-white/10 px-6 py-5 md:hidden">
+          <div className="flex flex-col gap-4 text-sm font-semibold text-white/70">
+            <span className="mono-label text-coral">Prestations</span>
             {PRESTATIONS.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
+              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="hover:text-white">
                 {item.label}
               </Link>
             ))}
             {LINKS.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
+              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="hover:text-white">
                 {item.label}
               </Link>
             ))}
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-md bg-sky px-5 py-3 text-center text-white"
+              className="mt-2 rounded-md bg-coral px-5 py-3 text-center text-white"
             >
               Demander un devis
             </Link>

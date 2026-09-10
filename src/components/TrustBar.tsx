@@ -9,7 +9,7 @@ export default function TrustBar() {
   return (
     <div className="grid divide-y divide-line border-y border-line bg-mist md:grid-cols-4 md:divide-x md:divide-y-0">
       {ITEMS.map((item) => (
-        <div key={item.label} className="px-8 py-7">
+        <div key={item.label} className="px-8 py-7 transition-colors duration-300 hover:bg-white">
           <p className="mono-label text-coral">{item.label}</p>
           <p className="mt-2 text-sm text-ink-soft">{item.cap}</p>
         </div>
