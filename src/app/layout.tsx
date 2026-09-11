@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | StycFly",
   },
   description:
-    "Prises de vues aériennes professionnelles par drone pour l'immobilier et les événements sportifs. Télépilote certifié DGAC, basé en Bretagne, devis gratuit sous 24h.",
+    "Prises de vues aériennes professionnelles par drone pour l'immobilier et tous types d'événements, sportifs compris. Télépilote certifié DGAC, basé en Bretagne, devis gratuit sous 24h.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -111,8 +111,8 @@ export default function AProposPage() {
           </p>
           <p className="mt-5 max-w-[65ch] text-ink-soft">
             Basé en Bretagne, j&apos;interviens partout en France auprès des
-            agences immobilières et des organisateurs d&apos;événements
-            sportifs.
+            agences immobilières et des organisateurs d&apos;événements de
+            toutes sortes — sportifs, professionnels ou festifs.
           </p>
         </Reveal>
 

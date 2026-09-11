@@ -15,9 +15,9 @@ const CATEGORIES = [
     href: "/immobilier",
   },
   {
-    slug: "evenements-sportifs",
-    title: "Événements sportifs",
-    href: "/evenements-sportifs",
+    slug: "evenements",
+    title: "Événements",
+    href: "/evenements",
   },
 ];
 

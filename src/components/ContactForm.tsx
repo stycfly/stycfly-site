@@ -55,7 +55,7 @@ export default function ContactForm() {
           >
             <option value="" disabled>Choisissez…</option>
             <option value="immobilier">Immobilier</option>
-            <option value="evenement-sportif">Événement sportif</option>
+            <option value="evenement">Événement</option>
             <option value="autre">Autre</option>
           </select>
         </div>

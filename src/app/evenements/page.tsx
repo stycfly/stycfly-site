@@ -6,32 +6,32 @@ import Timeline from "@/components/Timeline";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Vidéaste Drone Événements Sportifs",
+  title: "Vidéaste Drone Événements",
   description:
-    "Des images aériennes qui valorisent vos événements sportifs et compétitions. Télépilote DGAC, devis gratuit sous 24h.",
+    "Des images aériennes qui valorisent tous vos événements — sportifs, professionnels, culturels ou festifs. Télépilote DGAC, devis gratuit sous 24h.",
 };
 
 const DELIVERABLES = [
-  "Photos aériennes du site, du parcours et des participants",
-  "Plans dynamiques de la course, de l'épreuve ou de la compétition",
+  "Photos aériennes du site et des participants",
+  "Plans dynamiques des temps forts de votre événement",
   "Vidéo highlights montée et étalonnée",
-  "Formats prêts pour vos réseaux sociaux et vos partenaires/sponsors",
+  "Formats prêts pour vos réseaux sociaux et vos partenaires",
 ];
 
 const MISSION_STEPS = [
-  { n: "01", title: "On échange en amont", cap: "Déroulé de l'épreuve, moments clés à capter." },
+  { n: "01", title: "On échange en amont", cap: "Déroulé de l'événement, moments clés à capter." },
   { n: "02", title: "Coordination avec l'organisation", cap: "Repérage du site, contraintes de sécurité." },
-  { n: "03", title: "Captation dynamique", cap: "Départ, parcours, arrivée, podium." },
+  { n: "03", title: "Captation le jour J", cap: "Temps forts, ambiance, public." },
   { n: "04", title: "Vidéo highlights livrée", cap: "Étalonnée, formats réseaux inclus." },
 ];
 
-export default function EvenementsSportifsPage() {
+export default function EvenementsPage() {
   return (
     <>
       <PageHero
         eyebrow="Prestation · 02"
-        title="Photos & vidéos pour vos événements sportifs"
-        lead="Des vues aériennes spectaculaires de vos compétitions et événements sportifs, qui valorisent votre organisation et vos sponsors."
+        title="Photos & vidéos pour vos événements"
+        lead="Des vues aériennes spectaculaires pour tous types d'événements — sportifs, professionnels, culturels ou festifs — qui valorisent votre organisation."
       >
         <div className="mt-8 flex justify-center gap-4">
           <Button href="/contact">Demander un devis événement</Button>
@@ -43,7 +43,16 @@ export default function EvenementsSportifsPage() {
         <Reveal>
           <p className="mono-label text-coral">Bénéfice clé</p>
           <p className="mt-2 text-2xl font-bold text-ink">
-            Des images qui valorisent votre événement et donnent envie d&apos;y participer.
+            Des images qui valorisent votre événement, quel qu&apos;il soit.
+          </p>
+        </Reveal>
+
+        <Reveal delay={60}>
+          <p className="mt-6 max-w-[65ch] text-ink-soft">
+            Compétition sportive, course, événement d&apos;entreprise,
+            inauguration, festival ou rassemblement associatif : chaque
+            événement a ses temps forts, et une vue aérienne les met en
+            valeur comme aucun autre angle ne le permet.
           </p>
         </Reveal>
 

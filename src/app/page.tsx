@@ -174,10 +174,10 @@ export default function Home() {
             <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[64px_1.3fr_1fr_auto] md:items-center md:gap-8">
               <span className="font-mono text-coral">02</span>
               <div>
-                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour vos événements sportifs</h3>
+                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour vos événements</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
-                  Des vues d&apos;ensemble spectaculaires de vos compétitions et
-                  événements sportifs, captées avec dynamisme.
+                  Des vues d&apos;ensemble spectaculaires pour tous vos
+                  événements — sportifs, professionnels ou festifs.
                 </p>
               </div>
               <p className="font-mono text-[0.82rem] text-sky">
@@ -186,7 +186,7 @@ export default function Home() {
                 </b>
                 Coordination avec les organisateurs · formats réseaux inclus.
               </p>
-              <Button href="/evenements-sportifs" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
+              <Button href="/evenements" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
                 Devis événement →
               </Button>
             </div>

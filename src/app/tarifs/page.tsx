@@ -31,7 +31,7 @@ export default function TarifsPage() {
       <PageHero
         eyebrow="Tarifs & devis"
         title="Un devis personnalisé, jamais un tarif standard"
-        lead="Chaque projet est différent : un survol de bien immobilier n'a ni les mêmes contraintes ni le même temps de production qu'une couverture d'événement sportif."
+        lead="Chaque projet est différent : un survol de bien immobilier n'a ni les mêmes contraintes ni le même temps de production qu'une couverture d'événement."
       >
         <div className="mt-8 flex justify-center">
           <Button href="/contact">Demander mon devis gratuit</Button>
