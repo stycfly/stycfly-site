@@ -110,41 +110,21 @@ export default function Home() {
             </div>
           </div>
 
-          <Parallax speed={0.1} className="animate-float relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
-            <svg viewBox="0 0 400 500" className="h-full w-full" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#BFE3FA" />
-                  <stop offset="55%" stopColor="#E8F4FC" />
-                  <stop offset="100%" stopColor="#FFFFFF" />
-                </linearGradient>
-                <radialGradient id="sun2" cx="72%" cy="16%" r="42%">
-                  <stop offset="0%" stopColor="#FF6B4A" stopOpacity="0.55" />
-                  <stop offset="100%" stopColor="#FF6B4A" stopOpacity="0" />
-                </radialGradient>
-              </defs>
-              <rect width="400" height="500" fill="url(#sky2)" />
-              <circle cx="290" cy="95" r="150" fill="url(#sun2)" />
-              <line x1="0" y1="240" x2="400" y2="240" stroke="#1C86D6" strokeOpacity="0.35" />
-              <g stroke="#1C86D6" strokeOpacity="0.18">
-                <line x1="0" y1="300" x2="400" y2="300" />
-                <line x1="0" y1="360" x2="400" y2="360" />
-                <line x1="0" y1="420" x2="400" y2="420" />
-              </g>
-              <g transform="translate(150,215)">
-                <circle cx="0" cy="15" r="3.4" fill="#FF6B4A" />
-                <circle cx="100" cy="15" r="3.4" fill="#FF6B4A" />
-                <circle cx="0" cy="15" r="9" fill="none" stroke="#0A1830" strokeWidth="1.4" />
-                <circle cx="100" cy="15" r="9" fill="none" stroke="#0A1830" strokeWidth="1.4" />
-                <line x1="9" y1="15" x2="91" y2="15" stroke="#0A1830" strokeWidth="1.4" />
-                <line x1="50" y1="15" x2="50" y2="0" stroke="#0A1830" strokeWidth="1.4" />
-                <rect x="40" y="-3" width="20" height="10" rx="2" fill="#0A1830" />
-              </g>
-            </svg>
+          <Parallax speed={0.1} className="animate-float relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 bg-navy-soft shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
+            <video
+              className="h-full w-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+            >
+              <source src="/videos/hero-drone.mp4" type="video/mp4" />
+            </video>
             <div className="absolute inset-x-4 bottom-4 flex justify-between rounded-md border border-ink/10 bg-white/80 px-3 py-2.5 font-mono text-[0.68rem] text-ink backdrop-blur">
               <span>ALT <b className="text-coral">118M</b></span>
               <span>VIT <b className="text-coral">6.2M/S</b></span>
-              <span>DJI MINI 2</span>
+              <span>DJI MINI 3</span>
             </div>
           </Parallax>
         </div>
@@ -275,7 +255,7 @@ export default function Home() {
                 {[
                   ["CERTIFICATION", "Télépilote DGAC en règle"],
                   ["RÉPONSE", "Sous 24h à chaque demande"],
-                  ["MATÉRIEL", "DJI Mini 2, capture 4K"],
+                  ["MATÉRIEL", "DJI Mini 3, capture 4K"],
                 ].map(([label, cap]) => (
                   <div key={label} className="flex items-baseline justify-between gap-4 bg-white px-7 py-6 transition-colors duration-300 hover:bg-mist/60">
                     <span className="mono-label text-coral">{label}</span>

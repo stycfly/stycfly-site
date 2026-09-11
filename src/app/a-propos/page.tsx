@@ -35,7 +35,7 @@ const PILLARS = [
   },
   {
     title: "Matériel pro",
-    cap: "DJI Mini 2, léger et discret, capture 4K, idéal sur tout type de terrain.",
+    cap: "DJI Mini 3, léger et discret, capture 4K, idéal sur tout type de terrain.",
     icon: (
       <>
         <rect x="4" y="8" width="16" height="10" rx="2" stroke="currentColor" strokeWidth={1.8} />
