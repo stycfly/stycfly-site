@@ -27,7 +27,7 @@ export default function Footer() {
             <p className="mono-label text-white/50">Prestations</p>
             <div className="mt-3 flex flex-col gap-2 text-sm">
               <Link href="/immobilier" className="nav-link w-fit hover:text-white">Immobilier</Link>
-              <Link href="/evenements-mariages" className="nav-link w-fit hover:text-white">Événements & Mariages</Link>
+              <Link href="/evenements-sportifs" className="nav-link w-fit hover:text-white">Événements sportifs</Link>
               <Link href="/tarifs" className="nav-link w-fit hover:text-white">Tarifs &amp; devis</Link>
             </div>
           </div>

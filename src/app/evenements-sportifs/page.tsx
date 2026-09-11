@@ -6,32 +6,32 @@ import Timeline from "@/components/Timeline";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Vidéaste Drone Mariage & Événements",
+  title: "Vidéaste Drone Événements Sportifs",
   description:
-    "Des images aériennes qui immortalisent votre mariage ou événement. Télépilote DGAC, discrétion garantie, devis gratuit sous 24h.",
+    "Des images aériennes qui valorisent vos événements sportifs et compétitions. Télépilote DGAC, devis gratuit sous 24h.",
 };
 
 const DELIVERABLES = [
-  "Photos aériennes du lieu et de vos invités ou participants",
-  "Plan séquence des moments clés (arrivée, vin d'honneur, temps forts)",
-  "Vidéo souvenir montée et étalonnée",
-  "Formats prêts pour vos réseaux sociaux et vos tirages",
+  "Photos aériennes du site, du parcours et des participants",
+  "Plans dynamiques de la course, de l'épreuve ou de la compétition",
+  "Vidéo highlights montée et étalonnée",
+  "Formats prêts pour vos réseaux sociaux et vos partenaires/sponsors",
 ];
 
 const MISSION_STEPS = [
-  { n: "01", title: "On échange en amont", cap: "Déroulé de votre journée, moments à immortaliser." },
-  { n: "02", title: "Coordination sur place", cap: "Avec vos autres prestataires, repérage du lieu." },
-  { n: "03", title: "Captation discrète", cap: "Intervention pendant les temps forts." },
-  { n: "04", title: "Vidéo montée livrée", cap: "Étalonnée, formats réseaux inclus." },
+  { n: "01", title: "On échange en amont", cap: "Déroulé de l'épreuve, moments clés à capter." },
+  { n: "02", title: "Coordination avec l'organisation", cap: "Repérage du site, contraintes de sécurité." },
+  { n: "03", title: "Captation dynamique", cap: "Départ, parcours, arrivée, podium." },
+  { n: "04", title: "Vidéo highlights livrée", cap: "Étalonnée, formats réseaux inclus." },
 ];
 
-export default function EvenementsMariagesPage() {
+export default function EvenementsSportifsPage() {
   return (
     <>
       <PageHero
         eyebrow="Prestation · 02"
-        title="Photos & vidéos pour événements et mariages"
-        lead="Des vues d'ensemble spectaculaires de votre événement ou de votre mariage, captées avec la discrétion que le moment exige."
+        title="Photos & vidéos pour vos événements sportifs"
+        lead="Des vues aériennes spectaculaires de vos compétitions et événements sportifs, qui valorisent votre organisation et vos sponsors."
       >
         <div className="mt-8 flex justify-center gap-4">
           <Button href="/contact">Demander un devis événement</Button>
@@ -43,7 +43,7 @@ export default function EvenementsMariagesPage() {
         <Reveal>
           <p className="mono-label text-coral">Bénéfice clé</p>
           <p className="mt-2 text-2xl font-bold text-ink">
-            Des souvenirs que vos invités n&apos;oublieront jamais.
+            Des images qui valorisent votre événement et donnent envie d&apos;y participer.
           </p>
         </Reveal>
 

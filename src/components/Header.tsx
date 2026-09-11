@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const PRESTATIONS = [
   { href: "/immobilier", label: "Immobilier" },
-  { href: "/evenements-mariages", label: "Événements & Mariages" },
+  { href: "/evenements-sportifs", label: "Événements sportifs" },
 ];
 
 const LINKS = [

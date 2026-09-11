@@ -5,7 +5,7 @@ import { getSupabaseServerClient } from "@/lib/supabase";
 
 const ACTIVITY_LABELS: Record<string, string> = {
   immobilier: "Immobilier",
-  "evenement-mariage": "Événement / Mariage",
+  "evenement-sportif": "Événement sportif",
   autre: "Autre",
 };
 

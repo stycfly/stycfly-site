@@ -12,7 +12,7 @@ const ARTICLES: [string, string][] = [
   ],
   [
     "Article 2 — Prestations",
-    "StycFly propose des prestations de photographie et vidéo aérienne par drone pour l'immobilier, les événements et les mariages. Le détail de chaque prestation est précisé dans le devis accepté par le client.",
+    "StycFly propose des prestations de photographie et vidéo aérienne par drone pour l'immobilier et les événements sportifs. Le détail de chaque prestation est précisé dans le devis accepté par le client.",
   ],
   [
     "Article 3 — Devis et commande",

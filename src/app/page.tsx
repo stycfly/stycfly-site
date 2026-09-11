@@ -174,19 +174,19 @@ export default function Home() {
             <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[64px_1.3fr_1fr_auto] md:items-center md:gap-8">
               <span className="font-mono text-coral">02</span>
               <div>
-                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour événements et mariages</h3>
+                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour vos événements sportifs</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
-                  Des vues d&apos;ensemble spectaculaires de votre événement ou de
-                  votre mariage, captées avec la discrétion que le moment exige.
+                  Des vues d&apos;ensemble spectaculaires de vos compétitions et
+                  événements sportifs, captées avec dynamisme.
                 </p>
               </div>
               <p className="font-mono text-[0.82rem] text-sky">
                 <b className="block font-body text-base font-bold text-ink">
-                  Des souvenirs que vos invités n&apos;oublieront jamais.
+                  Des images qui valorisent votre événement et vos participants.
                 </b>
-                Coordination avec vos autres prestataires · formats réseaux inclus.
+                Coordination avec les organisateurs · formats réseaux inclus.
               </p>
-              <Button href="/evenements-mariages" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
+              <Button href="/evenements-sportifs" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
                 Devis événement →
               </Button>
             </div>
@@ -240,7 +240,7 @@ export default function Home() {
                 <span className="font-display text-5xl leading-none text-coral">&rdquo;</span>
                 <blockquote className="mt-3 text-lg italic text-ink">
                   Emplacement réservé pour votre premier retour client — le mot
-                  d&apos;une agence, d&apos;un couple de mariés ou d&apos;une
+                  d&apos;une agence, d&apos;un club sportif ou d&apos;une
                   entreprise satisfaite viendra ici.
                 </blockquote>
                 <figcaption className="mt-4">
