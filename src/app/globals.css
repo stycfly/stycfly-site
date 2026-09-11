@@ -134,6 +134,52 @@ h1, h2, h3 {
   transform: translateY(-4px);
 }
 
+/* Word-by-word text reveal, driven by JS toggling .in-view on the parent */
+.word-reveal {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+.word-reveal > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.in-view .word-reveal > span,
+.word-reveal.in-view > span {
+  transform: translateY(0);
+}
+
+.magnetic {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.08); }
+}
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  pointer-events: none;
+  animation: glow-pulse 6s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.text-shine {
+  background: linear-gradient(90deg, currentColor 30%, #fff 50%, currentColor 70%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 5s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -4,6 +4,17 @@ import TrustBar from "@/components/TrustBar";
 import Faq from "@/components/Faq";
 import Timeline from "@/components/Timeline";
 import Reveal from "@/components/Reveal";
+import RevealText from "@/components/RevealText";
+import Magnetic from "@/components/Magnetic";
+import Parallax from "@/components/Parallax";
+import MarqueeBand from "@/components/MarqueeBand";
+
+const MARQUEE_ITEMS = [
+  "TÉLÉPILOTE DGAC CERTIFIÉ",
+  "LIVRAISON 48–72H",
+  "DEVIS GRATUIT SOUS 24H",
+  "BRETAGNE → FRANCE ENTIÈRE",
+];
 
 const JOURNEY = [
   { n: "01", title: "Vous décrivez votre projet", cap: "Formulaire de contact, 2 minutes." },
@@ -52,6 +63,12 @@ export default function Home() {
               "radial-gradient(ellipse 900px 500px at 85% -10%, rgba(255,107,74,0.18), transparent 60%), radial-gradient(ellipse 700px 500px at -5% 100%, rgba(47,116,214,0.25), transparent 60%)",
           }}
         />
+        <div className="glow-orb -left-24 top-1/3 h-72 w-72 bg-coral/25" aria-hidden="true" />
+        <div
+          className="glow-orb -right-16 top-10 h-96 w-96 bg-sky/25"
+          style={{ animationDelay: "2s" }}
+          aria-hidden="true"
+        />
         <div className="relative mx-auto grid max-w-6xl gap-14 px-6 py-20 md:grid-cols-[1.15fr_0.85fr] md:items-center md:py-28">
           <div>
             <span className="mono-label inline-flex items-center gap-2.5 rounded-full border border-white/20 px-4 py-1.5 text-white/80">
@@ -62,7 +79,8 @@ export default function Home() {
               Télépilote DGAC certifié — Bretagne
             </span>
             <h1 className="mt-6 text-[2.6rem] leading-[1.03] text-white md:text-[4rem]">
-              Vidéaste &amp; photographe <em className="text-coral not-italic">drone</em>.
+              <RevealText text="Vidéaste & photographe" />{" "}
+              <RevealText text="drone." delay={250} className="text-coral" />
             </h1>
             <p className="mt-6 max-w-[42ch] text-lg text-white/70 md:text-xl">
               Je transforme vos biens, vos événements et votre image de marque en
@@ -70,8 +88,12 @@ export default function Home() {
               toute légalité.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <Button href="/contact">Demander mon devis gratuit</Button>
-              <Button href="/tarifs" variant="ghost-invert">Voir mes prestations</Button>
+              <Magnetic>
+                <Button href="/contact">Demander mon devis gratuit</Button>
+              </Magnetic>
+              <Magnetic strength={0.25}>
+                <Button href="/tarifs" variant="ghost-invert">Voir mes prestations</Button>
+              </Magnetic>
             </div>
 
             <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-3">
@@ -88,7 +110,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="animate-float relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
+          <Parallax speed={0.1} className="animate-float relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
             <svg viewBox="0 0 400 500" className="h-full w-full" preserveAspectRatio="xMidYMid slice">
               <defs>
                 <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
@@ -124,9 +146,11 @@ export default function Home() {
               <span>VIT <b className="text-coral">6.2M/S</b></span>
               <span>DJI MINI 2</span>
             </div>
-          </div>
+          </Parallax>
         </div>
       </section>
+
+      <MarqueeBand items={MARQUEE_ITEMS} />
 
       <TrustBar />
 
@@ -282,8 +306,9 @@ export default function Home() {
       </section>
 
       {/* CTA FINALE */}
-      <section className="border-t border-line bg-sky-deep">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between">
+      <section className="relative overflow-hidden border-t border-line bg-sky-deep">
+        <div className="glow-orb left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 bg-coral/15" aria-hidden="true" />
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between">
           <Reveal>
             <h2 className="max-w-[18ch] text-3xl text-white md:text-4xl">
               Prêt à voir votre projet sous un nouvel angle ?
@@ -294,12 +319,14 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal delay={150} className="flex flex-shrink-0 flex-col items-start gap-3">
-            <Link
-              href="/contact"
-              className="rounded-md bg-coral px-6 py-3.5 font-semibold text-white transition-transform hover:-translate-y-0.5"
-            >
-              Demander mon devis gratuit →
-            </Link>
+            <Magnetic>
+              <Link
+                href="/contact"
+                className="inline-flex rounded-md bg-coral px-6 py-3.5 font-semibold text-white transition-transform hover:-translate-y-0.5"
+              >
+                Demander mon devis gratuit →
+              </Link>
+            </Magnetic>
             <span className="font-mono text-xs text-white/50">
               06 04 49 48 57 · contactstycfly@gmail.com
             </span>
