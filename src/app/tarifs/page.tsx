@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import PageHero from "@/components/PageHero";
 import Timeline from "@/components/Timeline";
 import Reveal from "@/components/Reveal";
+import FeatureGrid from "@/components/FeatureGrid";
 
 export const metadata: Metadata = {
   title: "Tarifs & Devis",
@@ -37,27 +38,22 @@ export default function TarifsPage() {
         </div>
       </PageHero>
 
-      <section className="mx-auto max-w-3xl px-6 py-20">
+      <section className="mx-auto max-w-4xl px-6 py-20">
         <Reveal>
           <h2 className="text-2xl text-ink">Ce qui influence le tarif</h2>
-          <ul className="mt-6 flex flex-col gap-3">
-            {FACTORS.map((item) => (
-              <li key={item} className="flex gap-3 text-ink-soft">
-                <span className="text-coral">→</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="mt-6">
+            <FeatureGrid items={FACTORS} />
+          </div>
         </Reveal>
 
         <Reveal delay={100}>
-          <h2 className="mt-14 text-2xl text-ink">Comment obtenir votre devis</h2>
+          <h2 className="mt-16 text-2xl text-ink">Comment obtenir votre devis</h2>
           <div className="mt-8">
             <Timeline steps={STEPS} />
           </div>
         </Reveal>
 
-        <p className="mt-14 text-ink-soft">
+        <p className="mt-14 max-w-[65ch] text-ink-soft">
           Les photos sont livrées sous 48 à 72h après l&apos;intervention.
           Comptez un délai supplémentaire pour une vidéo montée.
         </p>

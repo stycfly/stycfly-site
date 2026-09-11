@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Button from "@/components/Button";
 import PageHero from "@/components/PageHero";
+import FeatureGrid from "@/components/FeatureGrid";
+import Timeline from "@/components/Timeline";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Photographe Drone Immobilier",
@@ -13,6 +16,13 @@ const DELIVERABLES = [
   "Vidéo aérienne (survol, orbite, révélation) pour vos annonces et réseaux sociaux",
   "Pack photo + vidéo pour une présentation premium",
   "Prestation sur mesure pour les biens multiples et missions récurrentes",
+];
+
+const MISSION_STEPS = [
+  { n: "01", title: "On échange sur votre besoin", cap: "Bien à valoriser, usage prévu, contraintes du terrain." },
+  { n: "02", title: "Je prépare le vol", cap: "Vérification de zone, déclarations préalables si besoin." },
+  { n: "03", title: "Prise de vue le jour J", cap: "Plusieurs angles pour un maximum de matière." },
+  { n: "04", title: "Livraison sous 48–72h", cap: "Fichiers retouchés, lien sécurisé." },
 ];
 
 export default function ImmobilierPage() {
@@ -29,43 +39,39 @@ export default function ImmobilierPage() {
         </div>
       </PageHero>
 
-      <section className="mx-auto max-w-3xl px-6 py-20">
-        <p className="mono-label text-coral">Bénéfice clé</p>
-        <p className="mt-2 text-2xl font-bold text-ink">
-          Vos annonces se démarquent et se vendent plus vite.
-        </p>
+      <section className="mx-auto max-w-4xl px-6 py-20">
+        <Reveal>
+          <p className="mono-label text-coral">Bénéfice clé</p>
+          <p className="mt-2 text-2xl font-bold text-ink">
+            Vos annonces se démarquent et se vendent plus vite.
+          </p>
+        </Reveal>
 
         <h2 className="mt-14 text-2xl text-ink">Ce que je vous propose</h2>
-        <ul className="mt-6 flex flex-col gap-3">
-          {DELIVERABLES.map((item) => (
-            <li key={item} className="flex gap-3 text-ink-soft">
-              <span className="text-coral">→</span>
-              {item}
-            </li>
-          ))}
-        </ul>
+        <div className="mt-6">
+          <FeatureGrid items={DELIVERABLES} />
+        </div>
 
-        <h2 className="mt-14 text-2xl text-ink">Comment se déroule une mission</h2>
-        <p className="mt-4 text-ink-soft">
-          Tout commence par un échange sur votre besoin : le bien à mettre en
-          valeur, le type de contenu souhaité et l&apos;usage prévu. Je vérifie
-          ensuite la zone de vol et gère les éventuelles déclarations préalables.
-          Le jour de l&apos;intervention, je multiplie les angles pour disposer
-          d&apos;un maximum de matière, puis je livre vos fichiers retouchés sous
-          48 à 72h.
-        </p>
+        <h2 className="mt-16 text-2xl text-ink">Comment se déroule une mission</h2>
+        <div className="mt-10">
+          <Timeline steps={MISSION_STEPS} />
+        </div>
 
-        <h2 className="mt-14 text-2xl text-ink">Réglementation et sécurité</h2>
-        <p className="mt-4 text-ink-soft">
-          Télépilote certifié DGAC (n° FRA-RP-000000146148), j&apos;opère
-          conformément à la réglementation en vigueur : zones de vol autorisées,
-          hauteurs réglementaires, sécurisation de la zone au sol.
-        </p>
-
-        <p className="mt-4 font-semibold text-ink">
-          Zone d&apos;intervention : basé en Bretagne, je me déplace partout en
-          France selon les besoins de votre mission.
-        </p>
+        <Reveal delay={100}>
+          <div className="mt-16 rounded-xl border border-line bg-mist p-7">
+            <p className="mono-label text-coral">Réglementation et sécurité</p>
+            <p className="mt-3 text-ink-soft">
+              Télépilote certifié DGAC (n° FRA-RP-000000146148), j&apos;opère
+              conformément à la réglementation en vigueur : zones de vol
+              autorisées, hauteurs réglementaires, sécurisation de la zone au
+              sol.
+            </p>
+            <p className="mt-3 font-semibold text-ink">
+              Zone d&apos;intervention : basé en Bretagne, je me déplace
+              partout en France selon les besoins de votre mission.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="mt-12 flex gap-4">
           <Button href="/contact">Demander un devis immobilier</Button>

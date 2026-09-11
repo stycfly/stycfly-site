@@ -11,6 +11,15 @@
   --coral: #ff6b4a;
   --coral-deep: #e5502f;
   --line: #dfe5f0;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 2px rgba(10, 24, 48, 0.06), 0 1px 1px rgba(10, 24, 48, 0.04);
+  --shadow-md: 0 8px 24px -8px rgba(10, 24, 48, 0.12), 0 2px 8px -2px rgba(10, 24, 48, 0.06);
+  --shadow-lg: 0 24px 48px -16px rgba(10, 24, 48, 0.22), 0 8px 16px -8px rgba(10, 24, 48, 0.1);
+  --shadow-glow-coral: 0 12px 32px -8px rgba(255, 107, 74, 0.35);
 }
 
 @theme inline {
@@ -132,6 +141,40 @@ h1, h2, h3 {
 }
 .hover-lift:hover {
   transform: translateY(-4px);
+}
+
+/* Premium surface card: soft elevation, lifts and gains a coral-tinted
+   shadow on hover so it reads as "physical" rather than flat template UI */
+.card-premium {
+  position: relative;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+.card-premium:hover {
+  transform: translateY(-6px);
+  border-color: transparent;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Diagonal light sweep on primary buttons, triggered on hover */
+.btn-sheen {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.35) 48%, rgba(255, 255, 255, 0.35) 52%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-sheen:hover::after {
+  transform: translateX(120%);
 }
 
 /* Word-by-word text reveal, driven by JS toggling .in-view on the parent */

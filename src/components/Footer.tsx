@@ -2,7 +2,15 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-sky-deep text-white/80">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-sky-deep text-white/80">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, rgba(255,107,74,0.6), rgba(47,116,214,0.6), transparent)",
+        }}
+        aria-hidden="true"
+      />
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div>
@@ -18,26 +26,26 @@ export default function Footer() {
           <div>
             <p className="mono-label text-white/50">Prestations</p>
             <div className="mt-3 flex flex-col gap-2 text-sm">
-              <Link href="/immobilier" className="hover:text-white">Immobilier</Link>
-              <Link href="/evenements-mariages" className="hover:text-white">Événements & Mariages</Link>
-              <Link href="/tarifs" className="hover:text-white">Tarifs &amp; devis</Link>
+              <Link href="/immobilier" className="nav-link w-fit hover:text-white">Immobilier</Link>
+              <Link href="/evenements-mariages" className="nav-link w-fit hover:text-white">Événements & Mariages</Link>
+              <Link href="/tarifs" className="nav-link w-fit hover:text-white">Tarifs &amp; devis</Link>
             </div>
           </div>
 
           <div>
             <p className="mono-label text-white/50">Le studio</p>
             <div className="mt-3 flex flex-col gap-2 text-sm">
-              <Link href="/a-propos" className="hover:text-white">Qui suis-je</Link>
-              <Link href="/realisations" className="hover:text-white">Réalisations</Link>
-              <Link href="/contact" className="hover:text-white">Contact</Link>
+              <Link href="/a-propos" className="nav-link w-fit hover:text-white">Qui suis-je</Link>
+              <Link href="/realisations" className="nav-link w-fit hover:text-white">Réalisations</Link>
+              <Link href="/contact" className="nav-link w-fit hover:text-white">Contact</Link>
             </div>
           </div>
 
           <div>
             <p className="mono-label text-white/50">Contact</p>
             <div className="mt-3 flex flex-col gap-2 text-sm">
-              <a href="tel:0604494857" className="hover:text-white">06 04 49 48 57</a>
-              <a href="mailto:contactstycfly@gmail.com" className="hover:text-white">
+              <a href="tel:0604494857" className="nav-link w-fit hover:text-white">06 04 49 48 57</a>
+              <a href="mailto:contactstycfly@gmail.com" className="nav-link w-fit hover:text-white">
                 contactstycfly@gmail.com
               </a>
               <span className="mono-label text-white/40">DGAC · FRA-RP-000000146148</span>

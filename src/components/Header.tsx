@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PRESTATIONS = [
   { href: "/immobilier", label: "Immobilier" },
@@ -17,10 +17,28 @@ const LINKS = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [prestationsOpen, setPrestationsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 24);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-sky-deep/95 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
+    <header
+      className={`sticky top-0 z-50 border-b border-white/10 bg-sky-deep/95 backdrop-blur transition-shadow duration-300 ${
+        scrolled ? "shadow-[0_8px_24px_-12px_rgba(0,0,0,0.45)]" : ""
+      }`}
+    >
+      <div
+        className={`mx-auto flex max-w-6xl items-center justify-between px-6 transition-[height] duration-300 ${
+          scrolled ? "h-16" : "h-20"
+        }`}
+      >
         <Link
           href="/"
           className="font-display text-xl font-extrabold text-white transition-transform duration-200 hover:scale-[1.03]"
