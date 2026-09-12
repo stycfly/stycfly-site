@@ -50,6 +50,19 @@ export default function Footer() {
               </a>
               <span className="mono-label text-white/40">DGAC · FRA-RP-000000146148</span>
             </div>
+            <a
+              href="https://www.instagram.com/stycfly"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="StycFly sur Instagram"
+              className="mt-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-white hover:text-white"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth={1.8} />
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth={1.8} />
+                <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+              </svg>
+            </a>
           </div>
         </div>
 
