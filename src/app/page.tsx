@@ -121,11 +121,6 @@ export default function Home() {
             >
               <source src="/videos/hero-drone.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-x-4 bottom-4 flex justify-between rounded-md border border-ink/10 bg-white/80 px-3 py-2.5 font-mono text-[0.68rem] text-ink backdrop-blur">
-              <span>ALT <b className="text-coral">118M</b></span>
-              <span>VIT <b className="text-coral">6.2M/S</b></span>
-              <span>DJI MINI 3</span>
-            </div>
           </Parallax>
         </div>
       </section>
