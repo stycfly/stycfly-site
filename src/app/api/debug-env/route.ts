@@ -43,6 +43,7 @@ export async function GET() {
       SUPABASE_SERVICE_ROLE_KEY: inspect("SUPABASE_SERVICE_ROLE_KEY"),
       RESEND_API_KEY: inspect("RESEND_API_KEY"),
       DEBUG_TEST_VAR: inspect("DEBUG_TEST_VAR"),
+      SUPABASE_SERVICE_ROLE_KEY_V2: inspect("SUPABASE_SERVICE_ROLE_KEY_V2"),
     },
     { headers: { "Cache-Control": "no-store, max-age=0" } }
   );
