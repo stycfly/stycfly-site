@@ -42,6 +42,7 @@ export async function GET() {
       NEXT_PUBLIC_SUPABASE_URL: inspect("NEXT_PUBLIC_SUPABASE_URL"),
       SUPABASE_SERVICE_ROLE_KEY: inspect("SUPABASE_SERVICE_ROLE_KEY"),
       RESEND_API_KEY: inspect("RESEND_API_KEY"),
+      DEBUG_TEST_VAR: inspect("DEBUG_TEST_VAR"),
     },
     { headers: { "Cache-Control": "no-store, max-age=0" } }
   );
