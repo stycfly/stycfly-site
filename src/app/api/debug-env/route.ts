@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export const runtime = "nodejs";
+
 // TEMPORARY diagnostic route — reports facts about env vars without ever
 // exposing their actual content. Remove once the ByteString bug is fixed.
 function inspect(name: string) {
@@ -32,9 +36,13 @@ function inspect(name: string) {
 }
 
 export async function GET() {
-  return NextResponse.json({
-    NEXT_PUBLIC_SUPABASE_URL: inspect("NEXT_PUBLIC_SUPABASE_URL"),
-    SUPABASE_SERVICE_ROLE_KEY: inspect("SUPABASE_SERVICE_ROLE_KEY"),
-    RESEND_API_KEY: inspect("RESEND_API_KEY"),
-  });
+  return NextResponse.json(
+    {
+      checkedAt: new Date().toISOString(),
+      NEXT_PUBLIC_SUPABASE_URL: inspect("NEXT_PUBLIC_SUPABASE_URL"),
+      SUPABASE_SERVICE_ROLE_KEY: inspect("SUPABASE_SERVICE_ROLE_KEY"),
+      RESEND_API_KEY: inspect("RESEND_API_KEY"),
+    },
+    { headers: { "Cache-Control": "no-store, max-age=0" } }
+  );
 }
