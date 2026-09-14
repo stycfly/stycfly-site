@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Button from "@/components/Button";
 import PageHero from "@/components/PageHero";
 import FeatureGrid from "@/components/FeatureGrid";
@@ -50,6 +51,32 @@ export default function ImmobilierPage() {
         <h2 className="mt-14 text-2xl text-ink">Ce que je vous propose</h2>
         <div className="mt-6">
           <FeatureGrid items={DELIVERABLES} />
+        </div>
+
+        <h2 className="mt-16 text-2xl text-ink">Exemples de prises de vues</h2>
+        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+          <Reveal>
+            <div className="hover-lift overflow-hidden rounded-xl border border-line">
+              <Image
+                src="/images/immobilier/toiture-le-rheu.jpg"
+                alt="Vue aérienne d'une maison à Le Rheu, toiture et environnement"
+                width={720}
+                height={1280}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="hover-lift overflow-hidden rounded-xl border border-line">
+              <Image
+                src="/images/immobilier/terrasse-jardin.jpg"
+                alt="Vue aérienne d'une terrasse et d'un jardin arboré"
+                width={720}
+                height={1280}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </Reveal>
         </div>
 
         <h2 className="mt-16 text-2xl text-ink">Comment se déroule une mission</h2>
