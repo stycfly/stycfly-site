@@ -1,28 +1,42 @@
 import type { Metadata } from "next";
-import Button from "@/components/Button";
 import PageHero from "@/components/PageHero";
-import Timeline from "@/components/Timeline";
 import Reveal from "@/components/Reveal";
-import FeatureGrid from "@/components/FeatureGrid";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Tarifs & Devis",
   description:
-    "Devis personnalisé et gratuit pour toute prestation photo/vidéo par drone. Réponse sous 24h.",
+    "Tarifs clairs pour vos prises de vues aériennes immobilier, et devis personnalisé et gratuit pour vos événements. Réponse sous 24h.",
 };
 
-const FACTORS = [
-  "La durée sur site et le nombre de plans souhaités",
-  "La distance à parcourir depuis la Bretagne",
-  "La nécessité d'une autorisation de vol spécifique",
-  "Le volume de post-production (retouche, montage, étalonnage)",
-  "Photo seule, vidéo seule, ou pack photo + vidéo",
-];
-
-const STEPS = [
-  { n: "01", title: "Vous décrivez votre projet", cap: "Via le formulaire de contact." },
-  { n: "02", title: "Nous échangeons", cap: "Pour affiner le besoin." },
-  { n: "03", title: "Vous recevez un devis détaillé", cap: "Sans engagement, sous 24h." },
+const IMMOBILIER_PACKS = [
+  {
+    name: "Pack Photo",
+    price: "80€",
+    tagline: "Pour mettre en avant votre annonce rapidement.",
+    features: ["8 à 10 photos aériennes du bien", "Retouche incluse", "Livraison sous 48–72h"],
+  },
+  {
+    name: "Pack Photo + Vidéo extérieur",
+    price: "130€",
+    tagline: "La formule la plus demandée.",
+    features: [
+      "Tout le Pack Photo, plus :",
+      "Vidéo drone du bien vu de l'extérieur",
+      "Formats prêts pour les réseaux sociaux",
+    ],
+    highlighted: true,
+  },
+  {
+    name: "Pack Photo + Vidéo extérieur + Vidéo intérieur",
+    price: "180€",
+    tagline: "Une présentation complète, intérieur compris.",
+    features: [
+      "Tout le pack précédent, plus :",
+      "Vidéo de l'intérieur du bien",
+      "Idéal pour une présentation premium",
+    ],
+  },
 ];
 
 export default function TarifsPage() {
@@ -30,37 +44,84 @@ export default function TarifsPage() {
     <>
       <PageHero
         eyebrow="Tarifs & devis"
-        title="Un devis personnalisé, jamais un tarif standard"
-        lead="Chaque projet est différent : un survol de bien immobilier n'a ni les mêmes contraintes ni le même temps de production qu'une couverture d'événement."
-      >
-        <div className="mt-8 flex justify-center">
-          <Button href="/contact">Demander mon devis gratuit</Button>
-        </div>
-      </PageHero>
+        title="Des tarifs clairs pour l'immobilier, un devis pour vos événements"
+        lead="Pour l'immobilier, mes prix sont fixes et transparents. Pour vos événements, chaque projet est différent : je vous établis un devis personnalisé et gratuit."
+      />
 
-      <section className="mx-auto max-w-4xl px-6 py-20">
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        {/* IMMOBILIER */}
         <Reveal>
-          <h2 className="text-2xl text-ink">Ce qui influence le tarif</h2>
-          <div className="mt-6">
-            <FeatureGrid items={FACTORS} />
-          </div>
+          <p className="mono-label text-coral">Immobilier</p>
+          <h2 className="mt-3 text-3xl text-ink">Tarifs des prestations immobilier</h2>
         </Reveal>
 
-        <Reveal delay={100}>
-          <h2 className="mt-16 text-2xl text-ink">Comment obtenir votre devis</h2>
-          <div className="mt-8">
-            <Timeline steps={STEPS} />
-          </div>
-        </Reveal>
-
-        <p className="mt-14 max-w-[65ch] text-ink-soft">
-          Les photos sont livrées sous 48 à 72h après l&apos;intervention.
-          Comptez un délai supplémentaire pour une vidéo montée.
-        </p>
-
-        <div className="mt-8">
-          <Button href="/contact">Demander mon devis gratuit</Button>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {IMMOBILIER_PACKS.map((pack, i) => (
+            <Reveal key={pack.name} delay={i * 80}>
+              <div
+                className={`card-premium relative flex h-full flex-col p-7 ${
+                  pack.highlighted ? "border-coral/40 shadow-md" : ""
+                }`}
+              >
+                {pack.highlighted && (
+                  <span className="mono-label absolute -top-3 left-7 rounded-full bg-coral px-3 py-1 text-white">
+                    Populaire
+                  </span>
+                )}
+                <p className="font-bold text-ink">{pack.name}</p>
+                <p className="mt-1 text-sm text-ink-soft">{pack.tagline}</p>
+                <p className="mt-5 font-display text-4xl font-extrabold text-ink">
+                  {pack.price}
+                </p>
+                <ul className="mt-6 flex flex-1 flex-col gap-3">
+                  {pack.features.map((f) => (
+                    <li key={f} className="flex gap-2.5 text-sm text-ink-soft">
+                      <span className="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-coral/10 text-coral">
+                        <svg viewBox="0 0 24 24" className="h-2.5 w-2.5" fill="none">
+                          <path
+                            d="M5 13l4 4L19 7"
+                            stroke="currentColor"
+                            strokeWidth={3}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          ))}
         </div>
+
+        {/* ÉVÉNEMENTS */}
+        <Reveal delay={100}>
+          <p className="mono-label mt-20 text-coral">Événements</p>
+          <h2 className="mt-3 text-3xl text-ink">Sur devis, sans exception</h2>
+          <p className="mt-4 max-w-[65ch] text-ink-soft">
+            Compétition sportive, événement d&apos;entreprise, festival ou
+            rassemblement associatif : chaque événement a ses contraintes de
+            lieu, de durée et de temps forts à capter. Décrivez-moi votre
+            projet et je vous réponds avec un devis personnalisé et gratuit
+            sous 24h.
+          </p>
+        </Reveal>
+
+        {/* FORMULAIRE */}
+        <Reveal delay={150}>
+          <div className="mt-20 border-t border-line pt-16">
+            <h2 className="text-2xl text-ink">Demander mon devis</h2>
+            <p className="mt-3 max-w-[65ch] text-ink-soft">
+              Que ce soit pour l&apos;immobilier ou un événement, décrivez
+              votre projet ci-dessous.
+            </p>
+            <div className="mt-8 max-w-2xl">
+              <ContactForm />
+            </div>
+          </div>
+        </Reveal>
       </section>
     </>
   );
