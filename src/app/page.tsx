@@ -47,7 +47,7 @@ const FAQ_ITEMS = [
   {
     question: "Combien coûte une prestation drone ?",
     answer:
-      "Chaque projet est différent : le tarif dépend de la durée sur site, du nombre de plans et du volume de post-production. Je réalise un devis personnalisé et gratuit après un premier échange.",
+      "Chaque projet est différent : le tarif dépend de la durée sur site, du nombre de plans, du volume de post-production et des frais de déplacement. Je réalise un devis personnalisé et gratuit.",
   },
 ];
 
