@@ -12,9 +12,14 @@ export const metadata: Metadata = {
 const IMMOBILIER_PACKS = [
   {
     name: "Pack Photo",
-    price: "80€",
+    price: "70€",
     tagline: "Pour mettre en avant votre annonce rapidement.",
-    features: ["8 à 10 photos aériennes du bien", "Retouche incluse", "Livraison sous 48–72h"],
+    features: [
+      "6 photos aériennes du bien incluses",
+      "5€ par photo supplémentaire",
+      "Retouche incluse",
+      "Livraison sous 48–72h",
+    ],
   },
   {
     name: "Pack Photo + Vidéo extérieur",
