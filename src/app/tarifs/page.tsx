@@ -56,7 +56,7 @@ export default function TarifsPage() {
       <section className="mx-auto max-w-5xl px-6 py-20">
         {/* IMMOBILIER */}
         <Reveal>
-          <p className="mono-label text-base text-coral">Immobilier</p>
+          <p className="mono-label text-coral" style={{ fontSize: "1rem" }}>Immobilier</p>
           <h2 className="mt-3 text-3xl text-ink">Tarifs des prestations immobilier</h2>
         </Reveal>
 
@@ -103,7 +103,7 @@ export default function TarifsPage() {
 
         {/* ÉVÉNEMENTS */}
         <Reveal delay={100}>
-          <p className="mono-label mt-20 text-base text-coral">Événements</p>
+          <p className="mono-label mt-20 text-coral" style={{ fontSize: "1rem" }}>Événements</p>
           <h2 className="mt-3 text-3xl text-ink">Sur devis, sans exception</h2>
           <p className="mt-4 max-w-[65ch] text-ink-soft">
             Compétition sportive, événement d&apos;entreprise, festival ou
