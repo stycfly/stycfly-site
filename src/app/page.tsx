@@ -154,7 +154,7 @@ export default function Home() {
                 <b className="block font-body text-base font-bold text-ink">
                   Vos annonces se démarquent et se vendent plus vite.
                 </b>
-                Livraison 48–72h · déclarations de vol gérées pour vous.
+                Livraison des photos et vidéos après réception du paiement.
               </p>
               <Button href="/immobilier" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
                 Devis immobilier →
