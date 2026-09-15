@@ -218,8 +218,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 text-ink-soft">
                 StycFly vient de prendre son envol — les premiers témoignages
-                arriveront avec les premières missions. En attendant, voici ce qui
-                ne changera jamais.
+                arriveront avec les premières missions.
               </p>
             </div>
           </Reveal>
