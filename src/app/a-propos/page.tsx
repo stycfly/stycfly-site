@@ -26,7 +26,7 @@ const PILLARS = [
   },
   {
     title: "Réactif",
-    cap: "Un échange rapide, un devis personnalisé sous 24h, sans jargon inutile.",
+    cap: "Un retour rapide sous 24h.",
     icon: (
       <>
         <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth={1.8} />
