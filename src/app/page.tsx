@@ -20,7 +20,7 @@ const JOURNEY = [
   { n: "01", title: "Vous décrivez votre projet", cap: "Formulaire de contact, 2 minutes." },
   { n: "02", title: "On échange & je chiffre", cap: "Devis personnalisé sous 24h." },
   { n: "03", title: "Je capture le jour J", cap: "Vol déclaré, prise de vue soignée." },
-  { n: "04", title: "Vous recevez vos fichiers", cap: "Livraison sous 48–72h, lien sécurisé." },
+  { n: "04", title: "Vous recevez vos fichiers", cap: "Livraison des photos et vidéos après réception du paiement." },
 ];
 
 const FAQ_ITEMS = [
