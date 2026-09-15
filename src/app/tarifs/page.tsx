@@ -18,7 +18,7 @@ const IMMOBILIER_PACKS = [
       "6 photos aériennes du bien incluses",
       "5€ par photo supplémentaire",
       "Retouche incluse",
-      "Livraison sous 48–72h",
+      "Livraison sous 48–72h sous réserve du paiement",
     ],
   },
   {
