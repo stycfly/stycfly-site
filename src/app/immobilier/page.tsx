@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Button from "@/components/Button";
 import PageHero from "@/components/PageHero";
 import FeatureGrid from "@/components/FeatureGrid";
 import Timeline from "@/components/Timeline";
 import Reveal from "@/components/Reveal";
+import Carousel from "@/components/Carousel";
 
 export const metadata: Metadata = {
   title: "Photographe Drone Immobilier",
@@ -17,6 +17,13 @@ const DELIVERABLES = [
   "Vidéo aérienne (survol, orbite, révélation) pour vos annonces et réseaux sociaux",
   "Pack photo + vidéo pour une présentation premium",
   "Prestation sur mesure pour les biens multiples et missions récurrentes",
+];
+
+const GALLERY_SLIDES = [
+  { src: "/images/immobilier/toiture-le-rheu.jpg", alt: "Vue aérienne d'une maison à Le Rheu, toiture et environnement" },
+  { src: "/images/immobilier/terrasse-jardin.jpg", alt: "Vue aérienne d'une terrasse et d'un jardin arboré" },
+  { src: "/images/immobilier/maison-vue-toiture.jpg", alt: "Vue aérienne d'une maison et de son terrain arboré" },
+  { src: "/images/immobilier/jardin-arbore.jpg", alt: "Vue aérienne d'un jardin arboré et de son environnement" },
 ];
 
 const MISSION_STEPS = [
@@ -54,28 +61,9 @@ export default function ImmobilierPage() {
         </div>
 
         <h2 className="mt-16 text-2xl text-ink">Exemples de prises de vues</h2>
-        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+        <div className="mt-6 max-w-sm">
           <Reveal>
-            <div className="hover-lift overflow-hidden rounded-xl border border-line">
-              <Image
-                src="/images/immobilier/toiture-le-rheu.jpg"
-                alt="Vue aérienne d'une maison à Le Rheu, toiture et environnement"
-                width={720}
-                height={1280}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </Reveal>
-          <Reveal delay={80}>
-            <div className="hover-lift overflow-hidden rounded-xl border border-line">
-              <Image
-                src="/images/immobilier/terrasse-jardin.jpg"
-                alt="Vue aérienne d'une terrasse et d'un jardin arboré"
-                width={720}
-                height={1280}
-                className="h-auto w-full object-cover"
-              />
-            </div>
+            <Carousel slides={GALLERY_SLIDES} />
           </Reveal>
         </div>
 
