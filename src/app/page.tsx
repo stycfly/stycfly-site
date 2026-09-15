@@ -83,9 +83,8 @@ export default function Home() {
               <RevealText text="drone." delay={250} className="text-coral" />
             </h1>
             <p className="mt-6 max-w-[42ch] text-lg text-white/70 md:text-xl">
-              Je transforme vos biens, vos événements et votre image de marque en
-              images aériennes qui marquent — livrées en 48h, partout en France, en
-              toute légalité.
+              Donnez de la hauteur à vos biens, vos événements et votre image
+              de marque.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Magnetic>
