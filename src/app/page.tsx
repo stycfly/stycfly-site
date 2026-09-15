@@ -136,10 +136,6 @@ export default function Home() {
             <h2 className="mt-3 text-3xl text-ink md:text-4xl">
               Deux façons de voir votre projet d&apos;en haut.
             </h2>
-            <p className="mt-4 text-ink-soft">
-              Chaque prestation est pensée pour l&apos;usage qui en sera fait — une
-              annonce qui doit convaincre, ou un souvenir qui doit durer.
-            </p>
           </div>
         </Reveal>
 
