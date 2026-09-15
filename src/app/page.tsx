@@ -37,7 +37,7 @@ const FAQ_ITEMS = [
   {
     question: "Intervenez-vous partout en France ?",
     answer:
-      "Je suis basé en Bretagne et je me déplace partout en France selon les besoins de votre projet.",
+      "Je suis basé en Bretagne et je peux intervenir partout en France, avec des frais de déplacement facturés en sus selon la distance.",
   },
   {
     question: "Comment se déroule une prestation, du premier contact à la livraison ?",
