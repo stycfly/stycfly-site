@@ -35,7 +35,7 @@ const IMMOBILIER_PACKS = [
   {
     name: "Pack Photo + Vidéo extérieur + Vidéo intérieur",
     price: "180€",
-    tagline: "Une présentation complète, intérieur compris.",
+    tagline: "Vidéo de l'intérieur du bien avec le drone pour une visite virtuelle.",
     features: [
       "Tout le pack précédent, plus :",
       "Vidéo de l'intérieur du bien",
