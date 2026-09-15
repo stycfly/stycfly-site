@@ -50,19 +50,32 @@ export default function Footer() {
               </a>
               <span className="mono-label text-white/40">DGAC · FRA-RP-000000146148</span>
             </div>
-            <a
-              href="https://www.instagram.com/stycfly"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="StycFly sur Instagram"
-              className="mt-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-white hover:text-white"
-            >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none">
-                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth={1.8} />
-                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth={1.8} />
-                <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
-              </svg>
-            </a>
+            <div className="mt-4 flex gap-3">
+              <a
+                href="https://www.instagram.com/stycfly"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="StycFly sur Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-white hover:text-white"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth={1.8} />
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth={1.8} />
+                  <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/@stycfly"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="StycFly sur YouTube"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-white hover:text-white"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+                  <path d="M21.6 7.2s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.9 4 12 4 12 4h0s-3.9 0-6.7.2c-.4 0-1.3.1-2.1.9-.6.6-.8 2.1-.8 2.1S2.2 9 2.2 10.7v1.6c0 1.7.2 3.5.2 3.5s.2 1.5.8 2.1c.8.8 1.9.8 2.3.9C7 19 12 19 12 19s3.9 0 6.7-.3c.4-.1 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.7.2-3.5v-1.6c0-1.7-.2-3.5-.2-3.5zM9.9 14.6V8.9l5.4 2.9-5.4 2.8z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
