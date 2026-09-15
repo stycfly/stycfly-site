@@ -32,7 +32,7 @@ const FAQ_ITEMS = [
   {
     question: "Combien de temps pour recevoir mes photos et vidéos ?",
     answer:
-      "Les photos sont livrées sous 48 à 72h après l'intervention et réception du paiement. Pour une vidéo montée et étalonnée, comptez un délai légèrement supérieur, précisé dès le devis.",
+      "Les photos sont livrées sous 48 à 72h après l'intervention et réception du paiement.",
   },
   {
     question: "Intervenez-vous partout en France ?",
