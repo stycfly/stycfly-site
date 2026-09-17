@@ -55,12 +55,7 @@ export default function TarifsPage() {
 
       <section className="mx-auto max-w-5xl px-6 py-20">
         {/* IMMOBILIER */}
-        <Reveal>
-          <p className="mono-label text-coral" style={{ fontSize: "1rem" }}>Immobilier</p>
-          <h2 className="mt-3 text-3xl text-ink">Tarifs des prestations immobilier</h2>
-        </Reveal>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {IMMOBILIER_PACKS.map((pack, i) => (
             <Reveal key={pack.name} delay={i * 80}>
               <div
@@ -103,9 +98,7 @@ export default function TarifsPage() {
 
         {/* ÉVÉNEMENTS */}
         <Reveal delay={100}>
-          <p className="mono-label mt-20 text-coral" style={{ fontSize: "1rem" }}>Événements</p>
-          <h2 className="mt-3 text-3xl text-ink">Sur devis, sans exception</h2>
-          <p className="mt-4 max-w-[65ch] text-ink-soft">
+          <p className="mt-20 max-w-[65ch] text-ink-soft">
             Compétition sportive, événement d&apos;entreprise, festival ou
             rassemblement associatif : chaque événement a ses contraintes de
             lieu, de durée et de temps forts à capter. Décrivez-moi votre
