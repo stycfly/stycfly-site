@@ -49,8 +49,8 @@ export default function TarifsPage() {
     <>
       <PageHero
         eyebrow="Tarifs & devis"
-        title="Des tarifs clairs pour l'immobilier, un devis pour vos événements"
-        lead="Pour l'immobilier, mes prix sont fixes et transparents. Pour vos événements, chaque projet est différent : je vous établis un devis personnalisé et gratuit."
+        title="Des tarifs clairs pour l'immobilier, pour vos hôtels et Chambres d'Hôtes, un devis pour vos événements"
+        lead="Mes prix sont fixes et transparents. Pour vos événements, chaque projet est différent : je vous établis un devis personnalisé et gratuit."
       />
 
       <section className="mx-auto max-w-5xl px-6 py-20">
