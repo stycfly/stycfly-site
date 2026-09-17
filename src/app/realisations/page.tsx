@@ -24,7 +24,7 @@ const CATEGORIES = [
   },
   {
     slug: "hotellerie",
-    title: "Hôtellerie & chambres d'hôtes",
+    title: "Hôtellerie & Chambres d'Hôtes",
     href: "/hotellerie",
     preview: null,
   },

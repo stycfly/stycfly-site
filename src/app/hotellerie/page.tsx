@@ -6,7 +6,7 @@ import Timeline from "@/components/Timeline";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Vidéaste Drone Hôtellerie & Chambres d'hôtes",
+  title: "Vidéaste Drone Hôtellerie & Chambres d'Hôtes",
   description:
     "Photos et vidéos aériennes pour valoriser votre hôtel ou chambre d'hôtes : établissement, extérieurs et environnement. Télépilote DGAC, devis gratuit sous 24h.",
 };
@@ -30,7 +30,7 @@ export default function HotelleriePage() {
     <>
       <PageHero
         eyebrow="Prestation · 03"
-        title="Photos & vidéos pour hôtels et chambres d'hôtes"
+        title="Photos & vidéos pour hôtels et Chambres d'Hôtes"
         lead="Des vues aériennes qui donnent envie de réserver : votre établissement, ses extérieurs et son environnement, mis en valeur comme jamais depuis le sol."
       >
         <div className="mt-8 flex justify-center gap-4">

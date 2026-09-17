@@ -184,7 +184,7 @@ export default function Home() {
             <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[64px_1.3fr_1fr_auto] md:items-center md:gap-8">
               <span className="font-mono text-coral">03</span>
               <div>
-                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour hôtels et chambres d&apos;hôtes</h3>
+                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour hôtels et Chambres d&apos;Hôtes</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
                   Établissement, extérieurs et environnement mis en valeur
                   pour donner envie de réserver.
