@@ -22,6 +22,12 @@ const CATEGORIES = [
     href: "/evenements",
     preview: null,
   },
+  {
+    slug: "hotellerie",
+    title: "Hôtellerie & chambres d'hôtes",
+    href: "/hotellerie",
+    preview: null,
+  },
 ];
 
 export default function RealisationsPage() {
@@ -34,7 +40,7 @@ export default function RealisationsPage() {
       />
 
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {CATEGORIES.map((cat, i) => (
             <Reveal key={cat.slug} delay={i * 100}>
               <div className="hover-lift group overflow-hidden rounded-xl border border-line hover:border-sky/40 hover:shadow-xl">

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const PRESTATIONS = [
   { href: "/immobilier", label: "Immobilier" },
   { href: "/evenements", label: "Événements" },
+  { href: "/hotellerie", label: "Hôtellerie & chambres d'hôtes" },
 ];
 
 const LINKS = [

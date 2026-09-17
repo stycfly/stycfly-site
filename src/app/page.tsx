@@ -134,7 +134,7 @@ export default function Home() {
           <div className="max-w-xl">
             <p className="mono-label text-sky">Prestations</p>
             <h2 className="mt-3 text-3xl text-ink md:text-4xl">
-              Deux façons de voir votre projet d&apos;en haut.
+              Trois façons de voir votre projet d&apos;en haut.
             </h2>
           </div>
         </Reveal>
@@ -178,6 +178,26 @@ export default function Home() {
               </p>
               <Button href="/evenements" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
                 Devis événement →
+              </Button>
+            </div>
+
+            <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[64px_1.3fr_1fr_auto] md:items-center md:gap-8">
+              <span className="font-mono text-coral">03</span>
+              <div>
+                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour hôtels et chambres d&apos;hôtes</h3>
+                <p className="mt-2 max-w-[46ch] text-ink-soft">
+                  Établissement, extérieurs et environnement mis en valeur
+                  pour donner envie de réserver.
+                </p>
+              </div>
+              <p className="font-mono text-[0.82rem] text-sky">
+                <b className="block font-body text-base font-bold text-ink">
+                  Des images qui donnent envie de réserver avant la visite.
+                </b>
+                Contenus prêts pour votre site et vos plateformes de réservation.
+              </p>
+              <Button href="/hotellerie" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
+                Devis hôtellerie →
               </Button>
             </div>
           </div>
