@@ -10,7 +10,7 @@ export default function PageHero({
 }: {
   eyebrow: string;
   title: string;
-  lead: string;
+  lead: ReactNode;
   children?: ReactNode;
 }) {
   return (
