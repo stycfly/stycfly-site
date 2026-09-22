@@ -49,13 +49,6 @@ export default function TarifsPage() {
       <PageHero
         eyebrow="Tarifs & devis"
         title="Des tarifs clairs pour l'immobilier, les particuliers, les entreprises, hôtels, gîtes et Chambres d'Hôtes"
-        lead={
-          <>
-            Mes prix sont fixes et transparents.
-            <br />
-            Pour vos événements, chaque projet est différent : je vous établis un devis personnalisé et gratuit.
-          </>
-        }
       />
 
       <section className="mx-auto max-w-5xl px-6 py-20">

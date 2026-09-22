@@ -10,7 +10,7 @@ export default function PageHero({
 }: {
   eyebrow: string;
   title: string;
-  lead: ReactNode;
+  lead?: ReactNode;
   children?: ReactNode;
 }) {
   return (
@@ -28,7 +28,9 @@ export default function PageHero({
         <h1 className="mt-4 text-4xl text-white md:text-5xl">
           <RevealText text={title} />
         </h1>
-        <p className="mx-auto mt-5 max-w-[52ch] text-lg text-white/70">{lead}</p>
+        {lead && (
+          <p className="mx-auto mt-5 max-w-[52ch] text-lg text-white/70">{lead}</p>
+        )}
         {children}
       </Reveal>
     </section>
