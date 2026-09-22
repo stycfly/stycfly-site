@@ -79,7 +79,7 @@ export default function Home() {
               Télépilote DGAC certifié — Bretagne
             </span>
             <h1 className="mt-6 text-[2.6rem] leading-[1.03] text-white md:text-[4rem]">
-              <RevealText text="Vidéaste & photographe" />{" "}
+              <RevealText text="Vidéos et photographies par" />{" "}
               <RevealText text="drone." delay={250} className="text-coral" />
             </h1>
             <p className="mt-6 max-w-[42ch] text-lg text-white/70 md:text-xl">
