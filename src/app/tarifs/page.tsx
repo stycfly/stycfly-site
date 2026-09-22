@@ -15,31 +15,30 @@ const IMMOBILIER_PACKS = [
     price: "70€",
     tagline: "Pour mettre en avant votre annonce rapidement.",
     features: [
-      "6 photos aériennes du bien incluses",
+      "6 photos aériennes",
       "5€ par photo supplémentaire",
-      "Retouche incluse",
-      "Livraison sous 48–72h sous réserve du paiement",
+      "Retouches",
     ],
   },
   {
-    name: "Pack Photo + Vidéo extérieur",
-    price: "130€",
-    tagline: "La formule la plus demandée.",
+    name: "Vidéo",
+    price: "120€",
+    tagline: "Une vidéo prête à diffuser.",
     features: [
-      "Tout le Pack Photo, plus :",
-      "Vidéo drone du bien vu de l'extérieur",
-      "Formats prêts pour les réseaux sociaux",
+      "Format prêt pour les réseaux sociaux",
+      "20€ supplémentaire pour le montage",
     ],
-    highlighted: true,
   },
   {
-    name: "Pack Photo + Vidéo extérieur + Vidéo intérieur",
+    name: "Pack Photos + Vidéo",
     price: "180€",
-    tagline: "Vidéo de l'intérieur du bien avec le drone pour une visite virtuelle.",
+    tagline: "La formule la plus complète.",
     features: [
-      "Tout le pack précédent, plus :",
-      "Vidéo de l'intérieur du bien",
-      "Idéal pour une présentation premium",
+      "6 photos aériennes",
+      "5€ par photo supplémentaire",
+      "Retouches",
+      "Format prêt pour les réseaux sociaux",
+      "20€ supplémentaire pour le montage",
     ],
   },
 ];
@@ -64,16 +63,7 @@ export default function TarifsPage() {
         <div className="grid gap-6 md:grid-cols-3">
           {IMMOBILIER_PACKS.map((pack, i) => (
             <Reveal key={pack.name} delay={i * 80}>
-              <div
-                className={`card-premium relative flex h-full flex-col p-7 ${
-                  pack.highlighted ? "border-coral/40 shadow-md" : ""
-                }`}
-              >
-                {pack.highlighted && (
-                  <span className="mono-label absolute -top-3 left-7 rounded-full bg-coral px-3 py-1 text-white">
-                    Populaire
-                  </span>
-                )}
+              <div className="card-premium relative flex h-full flex-col p-7">
                 <p className="font-bold text-ink">{pack.name}</p>
                 <p className="mt-1 text-sm text-ink-soft">{pack.tagline}</p>
                 <p className="mt-5 font-display text-4xl font-extrabold text-ink">
@@ -101,6 +91,16 @@ export default function TarifsPage() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={100}>
+          <p className="mt-6 text-sm italic text-ink-soft">
+            *Tarifs hors déplacement, ajustés selon la distance parcourue.
+          </p>
+          <p className="mt-2 text-sm italic text-ink-soft">
+            *Pour tout projet particulier, une demande de devis gratuit est
+            possible directement via le formulaire ci-dessous.
+          </p>
+        </Reveal>
 
         {/* ÉVÉNEMENTS */}
         <Reveal delay={100}>
