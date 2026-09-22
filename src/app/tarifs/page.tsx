@@ -48,7 +48,7 @@ export default function TarifsPage() {
     <>
       <PageHero
         eyebrow="Tarifs & devis"
-        title="Des tarifs clairs pour l'immobilier, hôtels et Chambres d'Hôtes, un devis pour vos événements"
+        title="Des tarifs clairs pour l'immobilier, les particuliers, les entreprises, hôtels, gîtes et Chambres d'Hôtes"
         lead={
           <>
             Mes prix sont fixes et transparents.
