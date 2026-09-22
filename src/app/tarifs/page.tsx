@@ -102,17 +102,6 @@ export default function TarifsPage() {
           </p>
         </Reveal>
 
-        {/* ÉVÉNEMENTS */}
-        <Reveal delay={100}>
-          <p className="mt-20 max-w-[65ch] text-ink-soft">
-            Compétition sportive, événement d&apos;entreprise, festival ou
-            rassemblement associatif : chaque événement a ses contraintes de
-            lieu, de durée et de temps forts à capter. Décrivez-moi votre
-            projet et je vous réponds avec un devis personnalisé et gratuit
-            sous 24h.
-          </p>
-        </Reveal>
-
         {/* FORMULAIRE */}
         <Reveal delay={150}>
           <div className="mt-20 border-t border-line pt-16">
