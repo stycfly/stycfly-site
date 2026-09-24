@@ -20,6 +20,11 @@ const GALLERY_IMAGES = [
   { src: "/images/realisations/maison-jardin.jpg", alt: "Vue aérienne d'une maison avec jardin et allée", w: 720, h: 1280 },
   { src: "/images/realisations/terrasse-ombragee.jpg", alt: "Vue aérienne d'une terrasse ombragée par les arbres", w: 720, h: 1280 },
   { src: "/images/realisations/maison-vue-large.jpg", alt: "Vue aérienne large d'une maison et de son environnement", w: 720, h: 1280 },
+  { src: "/images/realisations/maison-piscine-1.jpg", alt: "Vue aérienne d'une maison contemporaine avec piscine et palmier", w: 900, h: 506 },
+  { src: "/images/realisations/maison-piscine-2.jpg", alt: "Vue aérienne d'une maison en pierre et bardage bois", w: 720, h: 1280 },
+  { src: "/images/realisations/maison-piscine-3.jpg", alt: "Vue aérienne d'une maison contemporaine et de son jardin", w: 900, h: 679 },
+  { src: "/images/realisations/maison-piscine-4.jpg", alt: "Vue aérienne d'une maison avec piscine et jardin arboré", w: 900, h: 506 },
+  { src: "/images/realisations/maison-piscine-5.jpg", alt: "Vue aérienne d'une maison et de son terrain", w: 720, h: 1280 },
 ];
 
 export default function RealisationsPage() {
