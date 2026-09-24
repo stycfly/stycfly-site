@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 
 const GALLERY_IMAGES = [
   { src: "/images/realisations/piscine-1.jpg", alt: "Vue aérienne d'une maison contemporaine avec piscine et palmier", w: 900, h: 506 },
+  { src: "/images/realisations/piscine-5.jpg", alt: "Vue aérienne d'une maison et de sa piscine", w: 720, h: 1280 },
   { src: "/images/realisations/piscine-2.jpg", alt: "Vue aérienne d'une maison en pierre et bardage bois avec piscine", w: 720, h: 1280 },
   { src: "/images/realisations/piscine-3.jpg", alt: "Vue aérienne d'une maison contemporaine et de son jardin avec piscine", w: 900, h: 679 },
   { src: "/images/realisations/piscine-4.jpg", alt: "Vue aérienne d'une maison avec piscine et jardin arboré", w: 900, h: 506 },
-  { src: "/images/realisations/piscine-5.jpg", alt: "Vue aérienne d'une maison et de sa piscine", w: 720, h: 1280 },
   { src: "/images/realisations/toiture-ardoise.jpg", alt: "Vue aérienne d'une toiture en ardoise avec panneaux solaires", w: 720, h: 1280 },
   { src: "/images/realisations/toiture-voiture.jpg", alt: "Vue aérienne d'une maison avec véhicule dans l'allée", w: 720, h: 1280 },
   { src: "/images/realisations/maison-parasol-1.jpg", alt: "Vue aérienne d'une maison et de sa terrasse ombragée", w: 720, h: 1280 },
