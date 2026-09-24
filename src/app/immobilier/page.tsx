@@ -24,6 +24,7 @@ const GALLERY_SLIDES = [
   { src: "/images/immobilier/terrasse-jardin.jpg", alt: "Vue aérienne d'une terrasse et d'un jardin arboré" },
   { src: "/images/immobilier/maison-vue-toiture.jpg", alt: "Vue aérienne d'une maison et de son terrain arboré" },
   { src: "/images/immobilier/jardin-arbore.jpg", alt: "Vue aérienne d'un jardin arboré et de son environnement" },
+  { src: "/images/immobilier/toiture-ardoise-jardin.jpg", alt: "Vue aérienne d'une toiture en ardoise entourée d'arbres" },
 ];
 
 const MISSION_STEPS = [
