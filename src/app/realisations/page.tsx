@@ -25,6 +25,10 @@ const GALLERY_IMAGES = [
   { src: "/images/realisations/maison-piscine-3.jpg", alt: "Vue aérienne d'une maison contemporaine et de son jardin", w: 900, h: 679 },
   { src: "/images/realisations/maison-piscine-4.jpg", alt: "Vue aérienne d'une maison avec piscine et jardin arboré", w: 900, h: 506 },
   { src: "/images/realisations/maison-piscine-5.jpg", alt: "Vue aérienne d'une maison et de son terrain", w: 720, h: 1280 },
+  { src: "/images/realisations/toiture-ardoise-2.jpg", alt: "Vue aérienne d'une toiture en ardoise avec panneaux solaires", w: 720, h: 1280 },
+  { src: "/images/realisations/toiture-voiture-2.jpg", alt: "Vue aérienne d'une maison avec véhicule dans l'allée", w: 720, h: 1280 },
+  { src: "/images/realisations/maison-parasol-1.jpg", alt: "Vue aérienne d'une maison et de sa terrasse ombragée", w: 720, h: 1280 },
+  { src: "/images/realisations/maison-parasol-2.jpg", alt: "Vue aérienne d'une maison et de son jardin", w: 720, h: 1280 },
 ];
 
 export default function RealisationsPage() {
