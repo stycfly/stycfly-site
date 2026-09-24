@@ -9,25 +9,17 @@ export const metadata: Metadata = {
   description: "Découvrez les prises de vues aériennes réalisées par StycFly.",
 };
 
-const CATEGORIES = [
-  {
-    slug: "immobilier",
-    title: "Immobilier",
-    href: "/immobilier",
-    preview: "/images/immobilier/toiture-le-rheu.jpg",
-  },
-  {
-    slug: "evenements",
-    title: "Événements",
-    href: "/evenements",
-    preview: null,
-  },
-  {
-    slug: "hotellerie",
-    title: "Hôtellerie & Chambres d'Hôtes",
-    href: "/hotellerie",
-    preview: null,
-  },
+const GALLERY_IMAGES = [
+  { src: "/images/realisations/maison-vue-toiture.jpg", alt: "Vue aérienne d'une maison et de son terrain arboré", w: 720, h: 1280 },
+  { src: "/images/realisations/jardin-arbore.jpg", alt: "Vue aérienne d'un jardin arboré et de son environnement", w: 720, h: 1280 },
+  { src: "/images/realisations/toiture-voiture.jpg", alt: "Vue aérienne d'une toiture en ardoise avec véhicule dans l'allée", w: 720, h: 1280 },
+  { src: "/images/realisations/terrasse-jardin.jpg", alt: "Vue aérienne d'une terrasse et d'un jardin arboré", w: 720, h: 1280 },
+  { src: "/images/realisations/maison-vue-ensemble.jpg", alt: "Vue aérienne d'ensemble d'une maison et son jardin", w: 720, h: 1280 },
+  { src: "/images/realisations/toiture-ardoise-jardin.jpg", alt: "Vue aérienne d'une toiture en ardoise entourée d'arbres", w: 720, h: 1118 },
+  { src: "/images/realisations/toiture-le-rheu.jpg", alt: "Vue aérienne d'une maison à Le Rheu, toiture et environnement", w: 720, h: 1280 },
+  { src: "/images/realisations/maison-jardin.jpg", alt: "Vue aérienne d'une maison avec jardin et allée", w: 720, h: 1280 },
+  { src: "/images/realisations/terrasse-ombragee.jpg", alt: "Vue aérienne d'une terrasse ombragée par les arbres", w: 720, h: 1280 },
+  { src: "/images/realisations/maison-vue-large.jpg", alt: "Vue aérienne large d'une maison et de son environnement", w: 720, h: 1280 },
 ];
 
 export default function RealisationsPage() {
@@ -35,47 +27,40 @@ export default function RealisationsPage() {
     <>
       <PageHero
         eyebrow="Réalisations"
-        title="Nos prises de vues, catégorie par catégorie"
-        lead="La galerie est en cours de constitution — les premières missions viendront remplacer ces emplacements très bientôt."
+        title="Nos prises de vues aériennes"
+        lead="Un aperçu des missions réalisées pour l'immobilier, les particuliers et les professionnels."
       />
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {CATEGORIES.map((cat, i) => (
-            <Reveal key={cat.slug} delay={i * 100}>
-              <div className="hover-lift group overflow-hidden rounded-xl border border-line hover:border-sky/40 hover:shadow-xl">
-                <div className="relative flex aspect-[4/3] flex-col items-center justify-center gap-2 overflow-hidden border-b border-dashed border-line bg-mist px-6 text-center">
-                  {cat.preview ? (
-                    <Image
-                      src={cat.preview}
-                      alt={`Vue aérienne — ${cat.title}`}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  ) : (
-                    <>
-                      <div className="absolute inset-0 bg-gradient-to-br from-sky/10 to-coral/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      <span className="mono-label relative text-sky">Galerie {cat.title}</span>
-                      <p className="relative text-sm text-ink-soft">
-                        Vos photos et vidéos remplaceront cet emplacement.
-                      </p>
-                    </>
-                  )}
+      <section className="bg-ink py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
+            {GALLERY_IMAGES.map((img, i) => (
+              <Reveal key={img.src} delay={(i % 4) * 80}>
+                <div className="mb-4 overflow-hidden rounded-xl break-inside-avoid">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={img.w}
+                    height={img.h}
+                    className="h-auto w-full object-cover transition-transform duration-300 hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
                 </div>
-                <div className="flex items-center justify-between p-6">
-                  <p className="font-bold text-ink">{cat.title}</p>
-                  <Button href={cat.href} variant="ghost" className="transition-transform group-hover:translate-x-1">
-                    Voir la prestation →
-                  </Button>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="mt-14 text-center">
-          <Button href="/contact">Demander un devis</Button>
-        </div>
+      <section className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <Reveal>
+          <p className="text-ink-soft">
+            D&apos;autres missions viendront enrichir cette galerie au fil du temps.
+          </p>
+          <div className="mt-8">
+            <Button href="/contact">Demander un devis</Button>
+          </div>
+        </Reveal>
       </section>
     </>
   );
