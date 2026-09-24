@@ -12,23 +12,13 @@ export const metadata: Metadata = {
 const GALLERY_IMAGES = [
   { src: "/images/realisations/maison-vue-toiture.jpg", alt: "Vue aérienne d'une maison et de son terrain arboré", w: 720, h: 1280 },
   { src: "/images/realisations/jardin-arbore.jpg", alt: "Vue aérienne d'un jardin arboré et de son environnement", w: 720, h: 1280 },
-  { src: "/images/realisations/toiture-voiture.jpg", alt: "Vue aérienne d'une toiture en ardoise avec véhicule dans l'allée", w: 720, h: 1280 },
+  { src: "/images/realisations/toiture-voiture.jpg", alt: "Vue aérienne d'une toiture avec véhicule dans l'allée", w: 720, h: 1280 },
   { src: "/images/realisations/terrasse-jardin.jpg", alt: "Vue aérienne d'une terrasse et d'un jardin arboré", w: 720, h: 1280 },
   { src: "/images/realisations/maison-vue-ensemble.jpg", alt: "Vue aérienne d'ensemble d'une maison et son jardin", w: 720, h: 1280 },
   { src: "/images/realisations/toiture-ardoise-jardin.jpg", alt: "Vue aérienne d'une toiture en ardoise entourée d'arbres", w: 720, h: 1118 },
   { src: "/images/realisations/toiture-le-rheu.jpg", alt: "Vue aérienne d'une maison à Le Rheu, toiture et environnement", w: 720, h: 1280 },
-  { src: "/images/realisations/maison-jardin.jpg", alt: "Vue aérienne d'une maison avec jardin et allée", w: 720, h: 1280 },
-  { src: "/images/realisations/terrasse-ombragee.jpg", alt: "Vue aérienne d'une terrasse ombragée par les arbres", w: 720, h: 1280 },
   { src: "/images/realisations/maison-vue-large.jpg", alt: "Vue aérienne large d'une maison et de son environnement", w: 720, h: 1280 },
-  { src: "/images/realisations/maison-piscine-1.jpg", alt: "Vue aérienne d'une maison contemporaine avec piscine et palmier", w: 900, h: 506 },
-  { src: "/images/realisations/maison-piscine-2.jpg", alt: "Vue aérienne d'une maison en pierre et bardage bois", w: 720, h: 1280 },
-  { src: "/images/realisations/maison-piscine-3.jpg", alt: "Vue aérienne d'une maison contemporaine et de son jardin", w: 900, h: 679 },
-  { src: "/images/realisations/maison-piscine-4.jpg", alt: "Vue aérienne d'une maison avec piscine et jardin arboré", w: 900, h: 506 },
-  { src: "/images/realisations/maison-piscine-5.jpg", alt: "Vue aérienne d'une maison et de son terrain", w: 720, h: 1280 },
-  { src: "/images/realisations/toiture-ardoise-2.jpg", alt: "Vue aérienne d'une toiture en ardoise avec panneaux solaires", w: 720, h: 1280 },
-  { src: "/images/realisations/toiture-voiture-2.jpg", alt: "Vue aérienne d'une maison avec véhicule dans l'allée", w: 720, h: 1280 },
-  { src: "/images/realisations/maison-parasol-1.jpg", alt: "Vue aérienne d'une maison et de sa terrasse ombragée", w: 720, h: 1280 },
-  { src: "/images/realisations/maison-parasol-2.jpg", alt: "Vue aérienne d'une maison et de son jardin", w: 720, h: 1280 },
+  { src: "/images/realisations/maison-piscine-4.jpg", alt: "Vue aérienne d'une maison contemporaine avec piscine et jardin", w: 900, h: 506 },
 ];
 
 export default function RealisationsPage() {
