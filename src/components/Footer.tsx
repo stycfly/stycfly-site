@@ -18,7 +18,7 @@ export default function Footer() {
               StycFly<span className="text-coral">.</span>
             </p>
             <p className="mt-3 max-w-xs text-sm text-white/70">
-              Vidéaste &amp; photographe drone. Télépilote certifié DGAC, basé en
+              Photo et vidéo par drone. Télépilote certifié DGAC, basé en
               Bretagne, interventions partout en France.
             </p>
           </div>
@@ -28,13 +28,13 @@ export default function Footer() {
             <div className="mt-3 flex flex-col gap-2 text-sm">
               <Link href="/immobilier" className="nav-link w-fit hover:text-white">Immobilier</Link>
               <Link href="/evenements" className="nav-link w-fit hover:text-white">Événements</Link>
-              <Link href="/hotellerie" className="nav-link w-fit hover:text-white">Hôtellerie &amp; Chambres d&apos;Hôtes</Link>
+              <Link href="/hotellerie" className="nav-link w-fit hover:text-white">Hôtellerie &amp; Chambres d&apos;hôtes</Link>
               <Link href="/tarifs" className="nav-link w-fit hover:text-white">Tarifs &amp; devis</Link>
             </div>
           </div>
 
           <div>
-            <p className="mono-label text-white/50">Le studio</p>
+            <p className="mono-label text-white/50">StycFly</p>
             <div className="mt-3 flex flex-col gap-2 text-sm">
               <Link href="/a-propos" className="nav-link w-fit hover:text-white">Qui suis-je</Link>
               <Link href="/realisations" className="nav-link w-fit hover:text-white">Réalisations</Link>

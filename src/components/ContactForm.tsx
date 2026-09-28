@@ -56,7 +56,7 @@ export default function ContactForm() {
             <option value="" disabled>Choisissez…</option>
             <option value="immobilier">Immobilier</option>
             <option value="evenement">Événement</option>
-            <option value="hotellerie">Hôtellerie &amp; Chambres d&apos;Hôtes</option>
+            <option value="hotellerie">Hôtellerie &amp; Chambres d&apos;hôtes</option>
             <option value="autre">Autre</option>
           </select>
         </div>
@@ -91,7 +91,7 @@ export default function ContactForm() {
             <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
           </svg>
         )}
-        {pending ? "Envoi en cours…" : "Demander mon devis"}
+        {pending ? "Envoi en cours…" : "Envoyer ma demande"}
       </button>
     </form>
   );

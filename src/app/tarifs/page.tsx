@@ -48,7 +48,7 @@ export default function TarifsPage() {
     <>
       <PageHero
         eyebrow="Tarifs & devis"
-        title="Des tarifs clairs pour l'immobilier, les particuliers, les entreprises, hôtels, gîtes et Chambres d'Hôtes"
+        title="Des tarifs clairs pour l'immobilier, les particuliers, les entreprises, hôtels, gîtes et chambres d'hôtes"
       />
 
       <section className="mx-auto max-w-5xl px-6 py-20">
@@ -98,7 +98,7 @@ export default function TarifsPage() {
         {/* FORMULAIRE */}
         <Reveal delay={150}>
           <div className="mt-20 border-t border-line pt-16">
-            <h2 className="text-2xl text-ink">Demander mon devis</h2>
+            <h2 className="text-2xl text-ink">Demander un devis</h2>
             <p className="mt-3 max-w-[65ch] text-ink-soft">
               Que ce soit pour l&apos;immobilier ou un événement, décrivez
               votre projet ci-dessous.

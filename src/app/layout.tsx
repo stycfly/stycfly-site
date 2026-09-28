@@ -23,11 +23,11 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "StycFly — Vidéaste & photographe drone",
+    default: "StycFly — Photo et vidéo par drone en Bretagne",
     template: "%s | StycFly",
   },
   description:
-    "Prises de vues aériennes professionnelles par drone pour l'immobilier et tous types d'événements, sportifs compris. Télépilote certifié DGAC, basé en Bretagne, devis gratuit sous 24h.",
+    "Photographe et vidéaste drone basé en Bretagne. Immobilier, événements, hôtellerie. Télépilote certifié DGAC (n° FRA-RP-000000146148), interventions partout en France.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

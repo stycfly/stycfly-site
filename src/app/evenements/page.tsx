@@ -29,34 +29,18 @@ export default function EvenementsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Prestation · 02"
+        eyebrow="Événements"
         title="Photos & vidéos pour vos événements"
-        lead="Des vues aériennes spectaculaires pour tous types d'événements — sportifs, professionnels, culturels ou festifs — qui valorisent votre organisation."
+        lead="Compétitions, séminaires, mariages, festivals. Des plans d'ensemble impossibles à obtenir depuis le sol, livrés aussi au format réseaux sociaux."
       >
         <div className="mt-8 flex justify-center gap-4">
           <Button href="/contact">Demander un devis événement</Button>
-          <Button href="/realisations" variant="ghost-invert">Voir nos réalisations</Button>
+          <Button href="/realisations" variant="ghost-invert">Voir mes réalisations</Button>
         </div>
       </PageHero>
 
       <section className="mx-auto max-w-4xl px-6 py-20">
-        <Reveal>
-          <p className="mono-label text-coral">Bénéfice clé</p>
-          <p className="mt-2 text-2xl font-bold text-ink">
-            Des images qui valorisent votre événement, quel qu&apos;il soit.
-          </p>
-        </Reveal>
-
-        <Reveal delay={60}>
-          <p className="mt-6 max-w-[65ch] text-ink-soft">
-            Compétition sportive, course, événement d&apos;entreprise,
-            inauguration, festival ou rassemblement associatif : chaque
-            événement a ses temps forts, et une vue aérienne les met en
-            valeur comme aucun autre angle ne le permet.
-          </p>
-        </Reveal>
-
-        <h2 className="mt-14 text-2xl text-ink">Ce que je vous propose</h2>
+        <h2 className="text-2xl text-ink">Ce que je vous propose</h2>
         <div className="mt-6">
           <FeatureGrid items={DELIVERABLES} />
         </div>
@@ -68,15 +52,11 @@ export default function EvenementsPage() {
 
         <Reveal delay={100}>
           <div className="mt-16 rounded-xl border border-line bg-mist p-7">
-            <p className="mono-label text-coral">Réglementation et sécurité</p>
-            <p className="mt-3 text-ink-soft">
+            <p className="text-ink-soft">
               Télépilote certifié DGAC (n° FRA-RP-000000146148), j&apos;opère
-              conformément à la réglementation en vigueur, avec les
-              déclarations de vol nécessaires selon le lieu.
-            </p>
-            <p className="mt-3 font-semibold text-ink">
-              Zone d&apos;intervention : basé en Bretagne, je me déplace
-              partout en France selon les besoins de votre projet.
+              selon la réglementation en vigueur, avec les déclarations de vol
+              nécessaires selon le lieu. Basé en Bretagne, je me déplace
+              partout en France.
             </p>
           </div>
         </Reveal>

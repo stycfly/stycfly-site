@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/Button";
 import TrustBar from "@/components/TrustBar";
 import Faq from "@/components/Faq";
@@ -7,47 +8,41 @@ import Reveal from "@/components/Reveal";
 import RevealText from "@/components/RevealText";
 import Magnetic from "@/components/Magnetic";
 import Parallax from "@/components/Parallax";
-import MarqueeBand from "@/components/MarqueeBand";
-
-const MARQUEE_ITEMS = [
-  "TÉLÉPILOTE DGAC CERTIFIÉ",
-  "LIVRAISON 48–72H",
-  "DEVIS GRATUIT SOUS 24H",
-  "BRETAGNE → FRANCE ENTIÈRE",
-];
 
 const JOURNEY = [
-  { n: "01", title: "Vous décrivez votre projet", cap: "Formulaire de contact, 2 minutes." },
-  { n: "02", title: "On échange & je chiffre", cap: "Devis personnalisé sous 24h." },
-  { n: "03", title: "Je capture le jour J", cap: "Vol déclaré, prise de vue soignée." },
-  { n: "04", title: "Vous recevez vos fichiers", cap: "Livraison des photos et vidéos après réception du paiement." },
+  { n: "01", title: "Vous décrivez votre projet" },
+  { n: "02", title: "Je vous envoie un devis sous 24 h" },
+  { n: "03", title: "Je réalise la prise de vue" },
+  { n: "04", title: "Vous recevez vos fichiers sous 48 à 72 h" },
+];
+
+const HIGHLIGHTS = [
+  { src: "/images/realisations/piscine-1.jpg", alt: "Vue aérienne d'une maison contemporaine avec piscine" },
+  { src: "/images/realisations/toiture-ardoise.jpg", alt: "Vue aérienne d'une toiture en ardoise avec panneaux solaires" },
+  { src: "/images/realisations/maison-parasol-1.jpg", alt: "Vue aérienne d'une maison et de sa terrasse ombragée" },
+  { src: "/images/realisations/piscine-3.jpg", alt: "Vue aérienne d'une maison contemporaine et de son jardin avec piscine" },
 ];
 
 const FAQ_ITEMS = [
   {
     question: "Le pilotage par drone est-il légal ?",
     answer:
-      "Oui. Je suis télépilote certifié DGAC (n° FRA-RP-000000146148) et j'opère dans le respect strict de la réglementation française et européenne : zones de vol autorisées, hauteurs réglementaires, déclarations préalables lorsque nécessaire.",
+      "Oui. Je suis télépilote certifié DGAC (n° FRA-RP-000000146148) et j'opère dans le cadre réglementaire en vigueur.",
   },
   {
     question: "Combien de temps pour recevoir mes photos et vidéos ?",
     answer:
-      "Les photos sont livrées sous 48 à 72h après l'intervention et réception du paiement.",
+      "Les fichiers sont envoyés dès le règlement reçu, via un lien de téléchargement, sous 48 à 72 h après l'intervention.",
   },
   {
     question: "Intervenez-vous partout en France ?",
     answer:
-      "Je suis basé en Bretagne et je peux intervenir partout en France, avec des frais de déplacement facturés en plus selon la distance.",
-  },
-  {
-    question: "Comment se déroule une prestation, du premier contact à la livraison ?",
-    answer:
-      "Un échange pour cerner votre besoin, un devis personnalisé et gratuit, la prise de vue le jour J, puis la post-production avant livraison de vos fichiers via un lien sécurisé.",
+      "Je suis basé en Bretagne et j'interviens partout en France. Les frais de déplacement sont facturés selon la distance.",
   },
   {
     question: "Combien coûte une prestation drone ?",
     answer:
-      "Chaque projet est différent : le tarif dépend de la durée sur site, du nombre de plans, du volume de post-production et des frais de déplacement. Je réalise un devis personnalisé et gratuit.",
+      "Le tarif dépend du temps sur place, du nombre de prises de vue et de la distance à parcourir. Je vous envoie un devis gratuit sous 24 h.",
   },
 ];
 
@@ -83,29 +78,16 @@ export default function Home() {
               <RevealText text="drone." delay={250} className="text-coral" />
             </h1>
             <p className="mt-6 max-w-[42ch] text-lg text-white/70 md:text-xl">
-              Donnez de la hauteur à vos biens, vos événements et votre image
-              de marque.
+              Immobilier, événements, hôtellerie. Télépilote certifié DGAC,
+              j&apos;interviens partout en France.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Magnetic>
-                <Button href="/contact">Demander mon devis gratuit</Button>
+                <Button href="/contact">Demander un devis</Button>
               </Magnetic>
               <Magnetic strength={0.25}>
-                <Button href="/tarifs" variant="ghost-invert">Voir mes prestations</Button>
+                <Button href="/realisations" variant="ghost-invert">Voir les réalisations</Button>
               </Magnetic>
-            </div>
-
-            <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-3">
-              {[
-                "Vos annonces se démarquent et se vendent plus vite.",
-                "Vos événements marquent les esprits et se partagent.",
-                "Votre image de marque gagne en crédibilité instantanément.",
-              ].map((r) => (
-                <div key={r} className="hover-lift bg-navy-soft p-5 hover:bg-[#1c3358]">
-                  <span className="mono-label text-coral">Résultat</span>
-                  <p className="mt-2.5 text-[0.98rem] font-semibold text-white">{r}</p>
-                </div>
-              ))}
             </div>
           </div>
 
@@ -124,82 +106,80 @@ export default function Home() {
         </div>
       </section>
 
-      <MarqueeBand items={MARQUEE_ITEMS} />
-
       <TrustBar />
 
       {/* SERVICES */}
       <section className="mx-auto max-w-6xl px-6 py-24">
         <Reveal>
-          <div className="max-w-xl">
-            <p className="mono-label text-sky">Prestations</p>
-            <h2 className="mt-3 text-3xl text-ink md:text-4xl">
-              Trois façons de voir votre projet d&apos;en haut.
-            </h2>
-          </div>
+          <h2 className="text-3xl text-ink md:text-4xl">Prestations</h2>
         </Reveal>
 
         <Reveal delay={100}>
           <div className="mt-12 flex flex-col divide-y divide-line overflow-hidden rounded-xl border border-line">
-            <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[64px_1.3fr_1fr_auto] md:items-center md:gap-8">
-              <span className="font-mono text-coral">01</span>
+            <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[1.3fr_auto] md:items-center md:gap-8">
               <div>
-                <h3 className="text-xl font-bold text-ink">Prises de vues aériennes pour l&apos;immobilier</h3>
+                <h3 className="text-xl font-bold text-ink">Immobilier</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
-                  Photos et vidéos qui montrent le bien dans son environnement —
-                  terrain, quartier, accès — pour des annonces qui sortent du lot.
+                  Le bien, son terrain et ce qui l&apos;entoure. Des vues qui
+                  répondent aux questions des acheteurs avant la visite.
                 </p>
               </div>
-              <p className="font-mono text-[0.82rem] text-sky">
-                <b className="block font-body text-base font-bold text-ink">
-                  Vos annonces se démarquent et se vendent plus vite.
-                </b>
-                Livraison des photos et vidéos après réception du paiement.
-              </p>
               <Button href="/immobilier" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
-                Devis immobilier →
+                Découvrir →
               </Button>
             </div>
 
-            <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[64px_1.3fr_1fr_auto] md:items-center md:gap-8">
-              <span className="font-mono text-coral">02</span>
+            <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[1.3fr_auto] md:items-center md:gap-8">
               <div>
-                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour vos événements</h3>
+                <h3 className="text-xl font-bold text-ink">Événements</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
-                  Des vues d&apos;ensemble spectaculaires pour tous vos
-                  événements — sportifs, professionnels ou festifs.
+                  Compétitions, séminaires, mariages, festivals. Des plans
+                  d&apos;ensemble impossibles à obtenir depuis le sol, livrés
+                  aussi au format réseaux sociaux.
                 </p>
               </div>
-              <p className="font-mono text-[0.82rem] text-sky">
-                <b className="block font-body text-base font-bold text-ink">
-                  Des images qui valorisent votre événement et vos participants.
-                </b>
-                Coordination avec les organisateurs · formats réseaux inclus.
-              </p>
               <Button href="/evenements" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
-                Devis événement →
+                Découvrir →
               </Button>
             </div>
 
-            <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[64px_1.3fr_1fr_auto] md:items-center md:gap-8">
-              <span className="font-mono text-coral">03</span>
+            <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[1.3fr_auto] md:items-center md:gap-8">
               <div>
-                <h3 className="text-xl font-bold text-ink">Photos &amp; vidéos pour hôtels et Chambres d&apos;Hôtes</h3>
+                <h3 className="text-xl font-bold text-ink">Hôtellerie &amp; Chambres d&apos;hôtes</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
-                  Établissement, extérieurs et environnement mis en valeur
-                  pour donner envie de réserver.
+                  L&apos;établissement dans son cadre, pour votre site et vos
+                  annonces Booking ou Airbnb.
                 </p>
               </div>
-              <p className="font-mono text-[0.82rem] text-sky">
-                <b className="block font-body text-base font-bold text-ink">
-                  Des images qui donnent envie de réserver avant la visite.
-                </b>
-                Contenus prêts pour votre site et vos plateformes de réservation.
-              </p>
               <Button href="/hotellerie" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
-                Devis hôtellerie →
+                Découvrir →
               </Button>
             </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* RÉALISATIONS */}
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <Reveal>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            {HIGHLIGHTS.map((img) => (
+              <div key={img.src} className="aspect-[4/5] overflow-hidden rounded-xl">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={720}
+                  height={900}
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/realisations" className="nav-link font-semibold text-ink hover:text-sky">
+              Voir toutes les réalisations →
+            </Link>
           </div>
         </Reveal>
       </section>
@@ -208,16 +188,7 @@ export default function Home() {
       <section className="border-y border-line bg-mist">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <Reveal>
-            <div className="max-w-xl">
-              <p className="mono-label text-sky">Votre expérience</p>
-              <h2 className="mt-3 text-3xl text-ink md:text-4xl">
-                Du premier message à vos fichiers livrés.
-              </h2>
-              <p className="mt-4 text-ink-soft">
-                Un parcours simple et transparent, pensé pour vous faire gagner du
-                temps à chaque étape.
-              </p>
-            </div>
+            <h2 className="text-3xl text-ink md:text-4xl">Comment ça se passe</h2>
           </Reveal>
           <Reveal delay={100}>
             <div className="mt-14">
@@ -227,65 +198,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PREUVE SOCIALE */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <Reveal>
-            <div className="max-w-xl">
-              <p className="mono-label text-sky">Confiance</p>
-              <h2 className="mt-3 text-3xl text-ink md:text-4xl">
-                Une activité qui démarre, une exigence qui ne change pas.
-              </h2>
-              <p className="mt-4 text-ink-soft">
-                StycFly vient de prendre son envol — les premiers témoignages
-                arriveront avec les premières missions.
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={100}>
-            <div className="mt-12 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-              <figure className="hover-lift rounded-xl border border-dashed border-line bg-white p-9">
-                <span className="font-display text-5xl leading-none text-coral">&rdquo;</span>
-                <blockquote className="mt-3 text-lg italic text-ink">
-                  Emplacement réservé pour votre premier retour client — le mot
-                  d&apos;une agence, d&apos;un club sportif ou d&apos;une
-                  entreprise satisfaite viendra ici.
-                </blockquote>
-                <figcaption className="mt-4">
-                  <span className="block font-semibold text-ink">Exemple de mise en page</span>
-                  <span className="mono-label mt-1 block text-ink-soft">
-                    À remplacer par un vrai témoignage
-                  </span>
-                </figcaption>
-              </figure>
-
-              <div className="flex flex-col divide-y divide-line overflow-hidden rounded-xl border border-line">
-                {[
-                  ["CERTIFICATION", "Télépilote DGAC en règle"],
-                  ["RÉPONSE", "Sous 24h à chaque demande"],
-                  ["MATÉRIEL", "DJI Mini 3, capture 4K"],
-                ].map(([label, cap]) => (
-                  <div key={label} className="flex items-baseline justify-between gap-4 bg-white px-7 py-6 transition-colors duration-300 hover:bg-mist/60">
-                    <span className="mono-label text-coral">{label}</span>
-                    <span className="text-right text-sm text-ink-soft">{cap}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="mx-auto max-w-6xl px-6 py-24">
         <Reveal>
-          <div className="max-w-xl">
-            <p className="mono-label text-sky">Questions fréquentes</p>
-            <h2 className="mt-3 text-3xl text-ink md:text-4xl">
-              Avant de nous écrire, vous vous demandez sûrement…
-            </h2>
-          </div>
+          <h2 className="text-3xl text-ink md:text-4xl">Questions fréquentes</h2>
         </Reveal>
         <Reveal delay={100}>
           <div className="mt-12">
@@ -300,11 +216,11 @@ export default function Home() {
         <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between">
           <Reveal>
             <h2 className="max-w-[18ch] text-3xl text-white md:text-4xl">
-              Prêt à voir votre projet sous un nouvel angle ?
+              Un projet en tête ?
             </h2>
             <p className="mt-4 max-w-[44ch] text-white/70">
-              Décrivez votre besoin en deux minutes — je vous réponds avec un
-              devis personnalisé sous 24h.
+              Décrivez-le en quelques lignes, je vous réponds sous 24 h
+              avec un devis.
             </p>
           </Reveal>
           <Reveal delay={150} className="flex flex-shrink-0 flex-col items-start gap-3">
@@ -313,7 +229,7 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex rounded-md bg-coral px-6 py-3.5 font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                Demander mon devis gratuit →
+                Me contacter
               </Link>
             </Magnetic>
             <span className="font-mono text-xs text-white/50">

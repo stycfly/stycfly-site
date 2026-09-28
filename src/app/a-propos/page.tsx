@@ -53,7 +53,7 @@ export default function AProposPage() {
       <PageHero
         eyebrow="Qui suis-je"
         title="Costa Brémond, fondateur de StycFly"
-        lead="Depuis toujours, je suis fasciné par ce que l'on peut voir d'en haut."
+        lead="Photographe et vidéaste drone, basé en Bretagne."
       />
 
       <section className="mx-auto max-w-4xl px-6 py-20">
@@ -117,14 +117,14 @@ export default function AProposPage() {
 
         <Reveal delay={80}>
           <p className="mt-14 max-w-[65ch] text-lg text-ink-soft">
-            StycFly est né de cette passion : donner une autre perspective à
-            vos biens, vos événements et vos moments les plus importants,
-            grâce à des prises de vues aériennes par drone.
+            Je filme et photographie depuis le ciel : biens immobiliers,
+            événements, hôtels et chambres d&apos;hôtes. Une prise de vue
+            impossible à obtenir depuis le sol.
           </p>
           <p className="mt-5 max-w-[65ch] text-ink-soft">
-            Basé en Bretagne, j&apos;interviens partout en France auprès des
-            agences immobilières et des organisateurs d&apos;événements de
-            toutes sortes — sportifs, professionnels ou festifs.
+            Basé en Bretagne, j&apos;interviens partout en France, pour des
+            agences immobilières, des organisateurs d&apos;événements et des
+            établissements hôteliers.
           </p>
         </Reveal>
 
@@ -144,14 +144,7 @@ export default function AProposPage() {
           ))}
         </div>
 
-        <Reveal delay={150}>
-          <blockquote className="mt-16 border-l-2 border-coral pl-6 text-xl italic text-ink">
-            Parce que vos projets méritent d&apos;être vus sous leur meilleur
-            angle.
-          </blockquote>
-        </Reveal>
-
-        <div className="mt-12">
+        <div className="mt-16">
           <Magnetic>
             <Button href="/contact">Demander un devis</Button>
           </Magnetic>

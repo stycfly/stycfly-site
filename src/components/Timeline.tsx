@@ -1,7 +1,7 @@
 type Step = {
   n: string;
   title: string;
-  cap: string;
+  cap?: string;
 };
 
 export default function Timeline({ steps }: { steps: Step[] }) {
@@ -17,7 +17,7 @@ export default function Timeline({ steps }: { steps: Step[] }) {
             {step.n}
           </div>
           <p className="mt-4 font-bold text-ink">{step.title}</p>
-          <p className="mt-1.5 text-sm text-ink-soft">{step.cap}</p>
+          {step.cap && <p className="mt-1.5 text-sm text-ink-soft">{step.cap}</p>}
           {i < steps.length - 1 && (
             <span
               aria-hidden="true"
