@@ -20,11 +20,10 @@ const DELIVERABLES = [
 ];
 
 const GALLERY_SLIDES = [
-  { src: "/images/immobilier/toiture-le-rheu.jpg", alt: "Vue aérienne d'une maison à Le Rheu, toiture et environnement" },
+  { src: "/images/immobilier/maison-piscine-moderne.jpg", alt: "Vue aérienne d'une maison moderne avec piscine et jardin" },
   { src: "/images/immobilier/maison-vue-toiture.jpg", alt: "Vue aérienne d'une maison et de son terrain arboré" },
   { src: "/images/immobilier/terrasse-ombragee.jpg", alt: "Vue aérienne d'une maison avec terrasse ombragée et parasol" },
   { src: "/images/immobilier/maison-contemporaine-toiture.jpg", alt: "Vue aérienne d'une maison contemporaine et de sa toiture" },
-  { src: "/images/immobilier/maison-piscine-moderne.jpg", alt: "Vue aérienne d'une maison moderne avec piscine et jardin" },
 ];
 
 const MISSION_STEPS = [
