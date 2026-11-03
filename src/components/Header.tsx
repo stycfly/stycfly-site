@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const PRESTATIONS = [
-  { href: "/immobilier", label: "Immobilier" },
-  { href: "/evenements", label: "Événements" },
-  { href: "/hotellerie", label: "Hôtellerie & Chambres d'hôtes" },
+  { href: "/particuliers", label: "Particuliers" },
+  { href: "/entreprises", label: "Entreprises" },
+  { href: "/professionnels", label: "Professionnels" },
 ];
 
 const LINKS = [

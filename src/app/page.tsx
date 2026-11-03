@@ -78,8 +78,8 @@ export default function Home() {
               <RevealText text="drone." delay={250} className="text-coral" />
             </h1>
             <p className="mt-6 max-w-[42ch] text-lg text-white/70 md:text-xl">
-              Immobilier, événements, hôtellerie. Télépilote certifié DGAC,
-              j&apos;interviens partout en France.
+              Particuliers, entreprises, professionnels. Télépilote certifié
+              DGAC, j&apos;interviens partout en France.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Magnetic>
@@ -118,40 +118,39 @@ export default function Home() {
           <div className="mt-12 flex flex-col divide-y divide-line overflow-hidden rounded-xl border border-line">
             <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[1.3fr_auto] md:items-center md:gap-8">
               <div>
-                <h3 className="text-xl font-bold text-ink">Immobilier</h3>
+                <h3 className="text-xl font-bold text-ink">Particuliers</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
-                  Le bien, son terrain et ce qui l&apos;entoure. Des vues qui
-                  répondent aux questions des acheteurs avant la visite.
+                  Mariages, anniversaires, projets personnels. Je capture vos
+                  moments importants depuis le ciel.
                 </p>
               </div>
-              <Button href="/immobilier" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
+              <Button href="/particuliers" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
                 Découvrir →
               </Button>
             </div>
 
             <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[1.3fr_auto] md:items-center md:gap-8">
               <div>
-                <h3 className="text-xl font-bold text-ink">Événements</h3>
+                <h3 className="text-xl font-bold text-ink">Entreprises</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
-                  Compétitions, séminaires, mariages, festivals. Des plans
-                  d&apos;ensemble impossibles à obtenir depuis le sol, livrés
-                  aussi au format réseaux sociaux.
+                  Communication, séminaires, inaugurations. Des images
+                  aériennes qui valorisent votre entreprise.
                 </p>
               </div>
-              <Button href="/evenements" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
+              <Button href="/entreprises" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
                 Découvrir →
               </Button>
             </div>
 
             <div className="group grid gap-6 bg-white p-8 transition-colors duration-300 hover:bg-mist/60 md:grid-cols-[1.3fr_auto] md:items-center md:gap-8">
               <div>
-                <h3 className="text-xl font-bold text-ink">Hôtellerie &amp; Chambres d&apos;hôtes</h3>
+                <h3 className="text-xl font-bold text-ink">Professionnels</h3>
                 <p className="mt-2 max-w-[46ch] text-ink-soft">
-                  L&apos;établissement dans son cadre, pour votre site et vos
-                  annonces Booking ou Airbnb.
+                  Immobilier, hôtellerie, événements sportifs, collectivités.
+                  Des prises de vues adaptées à votre activité.
                 </p>
               </div>
-              <Button href="/hotellerie" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
+              <Button href="/professionnels" variant="ghost" className="justify-self-start transition-transform group-hover:translate-x-1 md:justify-self-end">
                 Découvrir →
               </Button>
             </div>

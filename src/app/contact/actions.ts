@@ -4,9 +4,9 @@ import { Resend } from "resend";
 import { getSupabaseServerClient } from "@/lib/supabase";
 
 const ACTIVITY_LABELS: Record<string, string> = {
-  immobilier: "Immobilier",
-  evenement: "Événement",
-  hotellerie: "Hôtellerie & Chambres d'hôtes",
+  particuliers: "Particulier",
+  entreprises: "Entreprise",
+  professionnels: "Professionnel",
   autre: "Autre",
 };
 

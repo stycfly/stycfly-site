@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | StycFly",
   },
   description:
-    "Photographe et vidéaste drone basé en Bretagne. Immobilier, événements, hôtellerie. Télépilote certifié DGAC (n° FRA-RP-000000146148), interventions partout en France.",
+    "Photographe et vidéaste drone basé en Bretagne. Pour les particuliers, les entreprises et les professionnels. Télépilote certifié DGAC (n° FRA-RP-000000146148), interventions partout en France.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

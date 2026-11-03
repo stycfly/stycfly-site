@@ -54,9 +54,9 @@ export default function ContactForm() {
             defaultValue=""
           >
             <option value="" disabled>Choisissez…</option>
-            <option value="immobilier">Immobilier</option>
-            <option value="evenement">Événement</option>
-            <option value="hotellerie">Hôtellerie &amp; Chambres d&apos;hôtes</option>
+            <option value="particuliers">Particulier</option>
+            <option value="entreprises">Entreprise</option>
+            <option value="professionnels">Professionnel</option>
             <option value="autre">Autre</option>
           </select>
         </div>
