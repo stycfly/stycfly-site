@@ -29,7 +29,6 @@ export default function Footer() {
               <Link href="/particuliers" className="nav-link w-fit hover:text-white">Particuliers</Link>
               <Link href="/entreprises" className="nav-link w-fit hover:text-white">Entreprises</Link>
               <Link href="/professionnels" className="nav-link w-fit hover:text-white">Professionnels</Link>
-              <Link href="/tarifs" className="nav-link w-fit hover:text-white">Tarifs &amp; devis</Link>
             </div>
           </div>
 

@@ -11,7 +11,6 @@ const PRESTATIONS = [
 
 const LINKS = [
   { href: "/realisations", label: "Réalisations" },
-  { href: "/tarifs", label: "Tarifs" },
   { href: "/a-propos", label: "Qui suis-je" },
 ];
 

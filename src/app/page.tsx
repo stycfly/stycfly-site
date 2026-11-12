@@ -39,11 +39,6 @@ const FAQ_ITEMS = [
     answer:
       "Je suis basé en Bretagne et j'interviens partout en France. Les frais de déplacement sont facturés selon la distance.",
   },
-  {
-    question: "Combien coûte une prestation drone ?",
-    answer:
-      "Le tarif dépend du temps sur place, du nombre de prises de vue et de la distance à parcourir. Je vous envoie un devis gratuit sous 24 h.",
-  },
 ];
 
 export default function Home() {
