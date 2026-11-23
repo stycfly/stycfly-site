@@ -23,7 +23,6 @@ const GALLERY_IMAGES = [
   { src: "/images/realisations/maison-piscine-moderne-2.jpg", alt: "Vue aérienne d'une maison moderne avec piscine et jardin", w: 720, h: 1280 },
   { src: "/images/realisations/maison-contemporaine-toiture.jpg", alt: "Vue aérienne d'une maison contemporaine et de sa toiture", w: 720, h: 1280 },
   { src: "/images/realisations/terrasse-ombragee.jpg", alt: "Vue aérienne d'une maison avec terrasse ombragée et parasol", w: 720, h: 1280 },
-  { src: "/images/realisations/maison-vue-toiture.jpg", alt: "Vue aérienne d'une maison et de son terrain arboré", w: 720, h: 1280 },
 ];
 
 export default function RealisationsPage() {
