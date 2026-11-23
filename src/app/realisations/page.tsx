@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 const GALLERY_IMAGES = [
+  { src: "/images/realisations/foret-automne.jpg", alt: "Vue aérienne d'une forêt aux couleurs d'automne", w: 720, h: 1280 },
   { src: "/images/realisations/piscine-1.jpg", alt: "Vue aérienne d'une maison contemporaine avec piscine et palmier", w: 900, h: 506 },
   { src: "/images/realisations/piscine-5.jpg", alt: "Vue aérienne d'une maison et de sa piscine", w: 720, h: 1280 },
   { src: "/images/realisations/piscine-2.jpg", alt: "Vue aérienne d'une maison en pierre et bardage bois avec piscine", w: 720, h: 1280 },
@@ -23,7 +24,6 @@ const GALLERY_IMAGES = [
   { src: "/images/realisations/maison-contemporaine-toiture.jpg", alt: "Vue aérienne d'une maison contemporaine et de sa toiture", w: 720, h: 1280 },
   { src: "/images/realisations/terrasse-ombragee.jpg", alt: "Vue aérienne d'une maison avec terrasse ombragée et parasol", w: 720, h: 1280 },
   { src: "/images/realisations/maison-vue-toiture.jpg", alt: "Vue aérienne d'une maison et de son terrain arboré", w: 720, h: 1280 },
-  { src: "/images/realisations/foret-automne.jpg", alt: "Vue aérienne d'une forêt aux couleurs d'automne", w: 720, h: 1280 },
 ];
 
 export default function RealisationsPage() {
